@@ -3,23 +3,34 @@ const getStandings = require("./getStandings");
 const getPlayerStats = require("./getPlayerStats");
 const getGames = require("./getGames");
 
+const r = new snoowrap({
+  userAgent: "app",
+  clientId: "rV0GkjLP_yvfNg",
+  clientSecret: "BovhTAIceBfPehZ6iOSzZBDm9sM",
+  username: "lakerbot",
+  password: "##lakers815"
+});
+
 const standingsHeader =
   "######[](/r)\n" +
   "####Current Standings\n" +
   "Team | W | L | % | GB\n" +
   "---|---|----|----|----\n";
+var standingsString = standingsHeader;
 
 const statsHeader =
   "######[](/r)\n" +
   "####Current Player Stats\n" +
   "Player | MPG | PPG | RPG | APG\n" +
   "---|---|----|----|----|----\n";
+var statsString = statsHeader;
 
 const monthScheduleHeader =
   "######[](/r)\n" +
   "#####This Month\n" +
-  " S | M | T | W | T | F | U \n" +
+  " U | M | T | W | T | F | S \n" +
   "---|---|---|---|---|---|---\n";
+var monthScheduleString = monthScheduleHeader;
 
 const teamToReddit = [
   { name: "Atlanta", reddit: "atlantahawks" },
@@ -54,10 +65,8 @@ const teamToReddit = [
   { name: "Washington", reddit: "washingtonwizards" }
 ];
 
-var getStandingsText = async () => {
-  var standingsString = standingsHeader;
-
-  await getStandings().then(standingArray => {
+getStandings()
+  .then(standingArray => {
     standingArray.map((e, i) => {
       standingsString +=
         `${e.name}|${e.wins}|${e.losses}|${e.winPercent}|${
@@ -65,27 +74,18 @@ var getStandingsText = async () => {
         }`.trim() + "\n";
     });
     standingsString += "\n";
-  });
 
-  return standingsString;
-};
-
-const getStatText = async () => {
-  var statsString = statsHeader;
-
-  await getPlayerStats().then(stats => {
+    return getPlayerStats();
+  })
+  .then(stats => {
     stats.map(c => {
       statsString += `${c.name}|${c[3]}|${c[4]}|${c[7]}|${c[8]}\n`;
     });
     statsString += "\n";
-  });
-  return statsString;
-};
 
-const getMonthly = async () => {
-  var monthScheduleString = monthScheduleHeader;
-
-  await getGames().then(games => {
+    return getGames();
+  })
+  .then(games => {
     const today = new Date();
     const numDaysInMonth = new Date(
       today.getFullYear(),
@@ -128,8 +128,6 @@ const getMonthly = async () => {
         monthScheduleString += " ";
       }
 
-      //TODO Add the time
-
       if (pipeCount === 6) {
         monthScheduleString += "\n";
         pipeCount = 0;
@@ -139,40 +137,25 @@ const getMonthly = async () => {
       }
     }
     monthScheduleString += "\n\n";
-  });
 
-  return monthScheduleString;
-};
-
-const r = new snoowrap({
-  userAgent: "app",
-  clientId: "rV0GkjLP_yvfNg",
-  clientSecret: "BovhTAIceBfPehZ6iOSzZBDm9sM",
-  username: "lakerbot",
-  password: "##lakers815"
-});
-
-const getSevenDays = async () => {
-  getGames().then(AllGames => {});
-};
-
-r.getSubreddit("lakers")
-  .getSettings("description")
-  .then(async res => {
+    return r.getSubreddit("lakers").getSettings("description");
+  })
+  .then(res => {
     const fullSettings = res.description;
     const beforeSplit = fullSettings.split(monthScheduleHeader)[0];
     const afterSplit = fullSettings
       .split("######[](/r)\n####Current Player Stats")[1]
       .split("#####[](/r)")[1];
 
-    var schedule = await getMonthly();
-    var stats = await getStatText();
-    var standings = await getStandingsText();
-
     var settings =
-      beforeSplit + schedule + standings + stats + "#####[](/r)" + afterSplit;
+      beforeSplit +
+      monthScheduleString +
+      standingsString +
+      statsString +
+      "#####[](/r)" +
+      afterSplit;
 
-    // console.log(settings);
+    console.log(settings);
     r.getSubreddit("likwidtesting").editSettings({
       description: settings
     });
