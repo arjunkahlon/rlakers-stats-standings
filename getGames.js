@@ -1,6 +1,5 @@
 const cheerio = require("cheerio");
 const request = require("request");
-var fs = require("fs");
 
 module.exports = function getGames() {
   return new Promise((resolve, reject) => {
@@ -28,7 +27,10 @@ module.exports = function getGames() {
 
           var rowsOfInfo = $("td")
             .filter(function(i, el) {
-              return $(this).text() === "Regular Season";
+              return (
+                $(this).text() === "Regular Season" ||
+                $(this).text() === "Preseason"
+              );
             })
             .parent()
             .next()
@@ -36,7 +38,7 @@ module.exports = function getGames() {
 
           rowsOfInfo.map((i, e) => {
             const columnsInRow = e.children;
-            const gameInfo = [];
+            const gameInfo = {};
 
             const gameDate = columnsInRow[0].firstChild.firstChild.data;
             const gameMonth = monthsString.indexOf(gameDate.split(" ")[1]);
@@ -57,16 +59,39 @@ module.exports = function getGames() {
               }
             }
 
-            const time = columnsInRow[2].firstChild.firstChild.firstChild.data;
-            var gameHour = Number(time.split(":")[0]);
-            const ampm = time.split(" ")[1];
-            if (gameHour === 12) {
-              gameHour = ampm === "AM" ? 0 : 12;
-            } else if (ampm === "PM") {
-              gameHour += 12;
-            }
+            var thirdCol = columnsInRow[2].firstChild;
+            var gameHour = 0;
+            var gameMinute = 0;
 
-            gameMinute = Number(time.split(":")[1].split(" ")[0]);
+            if (thirdCol.firstChild.firstChild) {
+              // If game has W/L and score
+              if (thirdCol.firstChild.firstChild.data.indexOf(":") === -1) {
+                // Result
+                if (thirdCol.firstChild.firstChild.data === "W") {
+                  gameInfo.isWin = true;
+                }
+                if (thirdCol.firstChild.firstChild.data === "L") {
+                  gameInfo.isWin = false;
+                }
+
+                if (thirdCol.children[1].firstChild.firstChild.data) {
+                  gameInfo.score = thirdCol.children[1].firstChild.firstChild.data.trim();
+                }
+              } else {
+                // Time
+                const time_result = thirdCol.firstChild.firstChild.data;
+
+                gameHour = Number(time_result.split(":")[0]);
+                const ampm = time_result.split(" ")[1];
+                if (gameHour === 12) {
+                  gameHour = ampm === "AM" ? 0 : 12;
+                } else if (ampm === "PM") {
+                  gameHour += 12;
+                }
+
+                gameMinute = Number(time_result.split(":")[1].split(" ")[0]);
+              }
+            }
 
             const dateGame = new Date(
               gameYear,
@@ -77,14 +102,23 @@ module.exports = function getGames() {
             );
 
             gameInfo.date = dateGame;
-            gameInfo.isHome =
-              columnsInRow[1].firstChild.firstChild.firstChild.data === "vs";
-            gameInfo.opponent =
-              columnsInRow[1].firstChild.children[2].firstChild.firstChild.data;
+
+            if (columnsInRow[1].firstChild.firstChild.firstChild) {
+              gameInfo.isHome =
+                columnsInRow[1].firstChild.firstChild.firstChild.data === "vs";
+            }
+
+            if (columnsInRow[1].firstChild.children[2]) {
+              gameInfo.opponent =
+                columnsInRow[1].firstChild.children[2].firstChild.firstChild.data;
+            }
 
             returnJson.push(gameInfo);
           });
 
+          returnJson = returnJson.filter(c => {
+            return c.opponent;
+          });
           resolve(returnJson);
         }
       }

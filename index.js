@@ -2,6 +2,8 @@ const snoowrap = require("snoowrap");
 const getStandings = require("./getStandings");
 const getPlayerStats = require("./getPlayerStats");
 const getGames = require("./getGames");
+const getRecord = require("./getRecord");
+const moment = require("moment-timezone");
 
 const r = new snoowrap({
   userAgent: "app",
@@ -31,6 +33,12 @@ const monthScheduleHeader =
   " U | M | T | W | T | F | S \n" +
   "---|---|---|---|---|---|---\n";
 var monthScheduleString = monthScheduleHeader;
+
+const recordHeader = "###### [](/record)\n";
+var recordString = recordHeader;
+
+const weekScheduleHeader = "###### [](/schedule)\n## Schedule:\n";
+var weekScheduleString = weekScheduleHeader;
 
 const teamToReddit = [
   { name: "Atlanta", reddit: "atlantahawks" },
@@ -63,6 +71,21 @@ const teamToReddit = [
   { name: "Toronto", reddit: "torontoraptors" },
   { name: "Utah", reddit: "utahjazz" },
   { name: "Washington", reddit: "washingtonwizards" }
+];
+
+var monthsString = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec"
 ];
 
 getStandings()
@@ -138,18 +161,72 @@ getStandings()
     }
     monthScheduleString += "\n\n";
 
+    return getGames();
+  })
+  .then(games => {
+    const today = new Date();
+    const todaysgame = games.filter(g => {
+      return g.date.getDate() === today.getDate();
+    });
+
+    var weeksGame;
+    const i = games.indexOf(todaysgame);
+    if (i < 2) {
+      weeksGame = games.splice(0, 7);
+    } else if (i >= games.length - 3) {
+      weeksGame = games.splice(games.length - 7, 7);
+    } else {
+      weeksGame = games.splice(i - 3, i + 3);
+    }
+
+    weeksGame.map(c => {
+      const ttr = teamToReddit.find(team => {
+        return c.opponent === team.name;
+      });
+
+      var stringDate = monthsString[c.date.getMonth()];
+      stringDate += ` ${c.date.getDate()}`;
+
+      var momentDate = moment(c.date);
+      var time = momentDate.tz("America/Los_Angeles").format("h:mma");
+
+      var hour = c.date.getHours();
+      hour = hour >= 12 ? hour - 12 : hour;
+      hour = hour === 0 ? 12 : hour;
+
+      weekScheduleString += `* [](/r/${ttr.reddit}) `;
+      weekScheduleString += `*${stringDate}* `;
+      weekScheduleString += c.score ? `**${c.score}** ` : `**${time}** `;
+      weekScheduleString += c.hasOwnProperty("isWin")
+        ? c.isWin
+          ? "[W](#W)"
+          : "[L](#L)"
+        : c.isHome
+          ? "[home](#home)"
+          : "[away](#away)";
+      weekScheduleString += "\n";
+    });
+    weekScheduleString += "\n";
+
+    return getRecord();
+  })
+  .then(record => {
+    recordString += `# Record ${record} \n\n`;
+
     return r.getSubreddit("lakers").getSettings("description");
   })
   .then(res => {
     const fullSettings = res.description;
-    const beforeSplit = fullSettings.split(monthScheduleHeader)[0];
+    const beforeSplit = fullSettings.split(recordHeader)[0];
     const afterSplit = fullSettings
       .split("######[](/r)\n####Current Player Stats")[1]
       .split("#####[](/r)")[1];
 
     var settings =
       beforeSplit +
+      recordString +
       monthScheduleString +
+      weekScheduleString +
       standingsString +
       statsString +
       "#####[](/r)" +
