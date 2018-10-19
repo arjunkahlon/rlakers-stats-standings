@@ -7,10 +7,10 @@ const moment = require("moment-timezone");
 
 const r = new snoowrap({
   userAgent: "app",
-  clientId: "rV0GkjLP_yvfNg",
-  clientSecret: "BovhTAIceBfPehZ6iOSzZBDm9sM",
+  clientId: "GufnVQldw0V4pw",
+  clientSecret: "GbSkOaUcOpnEfs2392moRi51J18",
   username: "lakerbot",
-  password: "##lakers815"
+  password: "8yGqHnaegSQe"
 });
 
 const standingsHeader =
@@ -91,10 +91,12 @@ var monthsString = [
 getStandings()
   .then(standingArray => {
     standingArray.map((e, i) => {
+      if(e.name){
       standingsString +=
         `${e.name}|${e.wins}|${e.losses}|${e.winPercent}|${
           e.gamesBehind
         }`.trim() + "\n";
+      }
     });
     standingsString += "\n";
 
@@ -102,7 +104,9 @@ getStandings()
   })
   .then(stats => {
     stats.map(c => {
-      statsString += `${c.name}|${c[3]}|${c[4]}|${c[7]}|${c[8]}\n`;
+      if(c.name){
+        statsString += `${c.name}|${c[3]}|${c[4]}|${c[7]}|${c[8]}\n`;
+      }
     });
     statsString += "\n";
 
@@ -233,7 +237,7 @@ getStandings()
       afterSplit;
 
     console.log(settings);
-    r.getSubreddit("likwidtesting").editSettings({
+    r.getSubreddit("lakers").editSettings({
       description: settings
     });
   });
