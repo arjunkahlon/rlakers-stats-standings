@@ -169,19 +169,24 @@ getStandings()
   })
   .then(games => {
     const today = new Date();
-    const todaysgame = games.filter(g => {
-      return g.date.getDate() === today.getDate();
+    const gameOnOrBeforeToday = games.filter(g => {
+      return g.date <= today;
     });
 
+    const lastGamePlayed = gameOnOrBeforeToday[gameOnOrBeforeToday.length-1];
+    
+    const i = games.indexOf(lastGamePlayed);
+
     var weeksGame;
-    const i = games.indexOf(todaysgame);
     if (i < 2) {
       weeksGame = games.splice(0, 7);
     } else if (i >= games.length - 3) {
       weeksGame = games.splice(games.length - 7, 7);
     } else {
-      weeksGame = games.splice(i - 3, i + 3);
+      weeksGame = games.splice(i - 2, i + 2);
     }
+
+    console.log(weeksGame)
 
     weeksGame.map(c => {
       const ttr = teamToReddit.find(team => {
@@ -236,8 +241,8 @@ getStandings()
       "#####[](/r)" +
       afterSplit;
 
-    console.log(settings);
-    r.getSubreddit("lakers").editSettings({
+    // console.log(settings);
+    r.getSubreddit("likwidtesting").editSettings({
       description: settings
     });
   });

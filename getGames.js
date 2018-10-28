@@ -49,7 +49,7 @@ module.exports = function getGames() {
             var gameYear = today.getFullYear();
             // If current month and game month aren't in the same half of the nba season
             // determined by end of season which very roughly halfway through the year
-            if (gameMonth < 6 !== today.getFullYear() < 6) {
+            if (gameMonth < 6 !== today.getMonth() < 6) {
               if (gameMonth > today.getMonth()) {
                 // Happened in later part of gregorian year so game from previous year
                 gameYear -= 1;
