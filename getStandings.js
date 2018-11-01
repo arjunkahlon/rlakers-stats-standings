@@ -34,8 +34,10 @@ module.exports = function getStandings() {
 
               teamStat.wins = stats[0].firstChild.data;
               teamStat.losses = stats[1].firstChild.data;
-              teamStat.winPercent = stats[2].firstChild.data;
-              teamStat.gamesBehind = stats[3].firstChild.data;
+              teamStat.winPercent = stats[3].firstChild.data;
+              teamStat.gamesBehind = stats[4].firstChild.data;
+
+              console.log(teamStat)
 
               returnJson.push(teamStat);
             }

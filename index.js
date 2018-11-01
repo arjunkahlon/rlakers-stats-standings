@@ -16,7 +16,7 @@ const r = new snoowrap({
 const standingsHeader =
   "######[](/r)\n" +
   "####Current Standings\n" +
-  "Team | W | L | % | GB\n" +
+  " Seed | Team | W | L | GB\n" +
   "---|---|----|----|----\n";
 var standingsString = standingsHeader;
 
@@ -93,9 +93,7 @@ getStandings()
     standingArray.map((e, i) => {
       if(e.name){
       standingsString +=
-        `${e.name}|${e.wins}|${e.losses}|${e.winPercent}|${
-          e.gamesBehind
-        }`.trim() + "\n";
+        `${i+1}|${e.name}|${e.wins}|${e.losses}|${e.gamesBehind}\n`;
       }
     });
     standingsString += "\n";
@@ -185,8 +183,6 @@ getStandings()
     } else {
       weeksGame = games.splice(i - 2, i + 2);
     }
-
-    console.log(weeksGame)
 
     weeksGame.map(c => {
       const ttr = teamToReddit.find(team => {
