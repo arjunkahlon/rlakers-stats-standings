@@ -32,8 +32,8 @@ module.exports = function getStandings() {
                 return el.type === "tag" && el.firstChild.data.trim();
               });
 
-              teamStat.wins = stats[0].firstChild.data;
-              teamStat.losses = stats[1].firstChild.data;
+              teamStat.wins = stats[1].firstChild.data;
+              teamStat.losses = stats[2].firstChild.data;
               teamStat.winPercent = stats[3].firstChild.data;
               teamStat.gamesBehind = stats[4].firstChild.data;
 
