@@ -243,7 +243,7 @@ getStandings()
       afterSplit;
 
     // console.log(settings);
-    r.getSubreddit("likwidtesting").editSettings({
+    r.getSubreddit("lakers").editSettings({
       description: settings
     });
   });
