@@ -59,22 +59,17 @@ module.exports = function getGames() {
               }
             }
 
-            var thirdCol = columnsInRow[2].firstChild;
+            var thirdCol = columnsInRow[2];
             var gameHour = 0;
             var gameMinute = 0;
 
-            if (thirdCol.firstChild.firstChild) {
+            if (thirdCol.firstChild.firstChild.type === "text") {
               // If game has W/L and score
               if (thirdCol.firstChild.firstChild.data.indexOf(":") === -1) {
                 // Result
-                if (thirdCol.firstChild.firstChild.data === "W") {
-                  gameInfo.isWin = true;
-                }
-                if (thirdCol.firstChild.firstChild.data === "L") {
-                  gameInfo.isWin = false;
-                }
+                gameInfo.isWin = thirdCol.firstChild.firstChild.data === "W";
 
-                if (thirdCol.children[1].firstChild.firstChild.data) {
+                if (thirdCol.children[1]) {
                   gameInfo.score = thirdCol.children[1].firstChild.firstChild.data.trim();
                 }
               } else {
@@ -112,7 +107,6 @@ module.exports = function getGames() {
               gameInfo.opponent =
                 columnsInRow[1].firstChild.children[2].firstChild.firstChild.data;
             }
-
             returnJson.push(gameInfo);
           });
 

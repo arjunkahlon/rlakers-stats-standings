@@ -91,9 +91,10 @@ var monthsString = [
 getStandings()
   .then(standingArray => {
     standingArray.map((e, i) => {
-      if(e.name){
-      standingsString +=
-        `${i+1}|${e.name}|${e.wins}|${e.losses}|${e.gamesBehind}\n`;
+      if (e.name) {
+        standingsString += `${i + 1}|${e.name}|${e.wins}|${e.losses}|${
+          e.gamesBehind
+        }\n`;
       }
     });
     standingsString += "\n";
@@ -102,7 +103,7 @@ getStandings()
   })
   .then(stats => {
     stats.map(c => {
-      if(c.name){
+      if (c.name) {
         statsString += `${c.name}|${c[3]}|${c[4]}|${c[7]}|${c[8]}\n`;
       }
     });
@@ -171,20 +172,24 @@ getStandings()
       return g.date <= today;
     });
 
-    const lastGamePlayed = gameOnOrBeforeToday[gameOnOrBeforeToday.length-1];
-    
+    const lastGamePlayed = gameOnOrBeforeToday[gameOnOrBeforeToday.length - 1];
+
     const i = games.indexOf(lastGamePlayed);
 
-    var weeksGame;
-    if (i < 2) {
-      weeksGame = games.splice(0, 7);
+    console.log(i);
+
+    var gamesToDisplay;
+    if (i < 3) {
+      gamesToDisplay = games.splice(0, 7);
     } else if (i >= games.length - 3) {
-      weeksGame = games.splice(games.length - 7, 7);
+      gamesToDisplay = games.splice(games.length - 7, 7);
     } else {
-      weeksGame = games.splice(i - 2, i + 2);
+      gamesToDisplay = games.splice(i - 2, 7);
     }
 
-    weeksGame.map(c => {
+    console.log(gamesToDisplay);
+
+    gamesToDisplay.map(c => {
       const ttr = teamToReddit.find(team => {
         return c.opponent === team.name;
       });
@@ -238,7 +243,7 @@ getStandings()
       afterSplit;
 
     // console.log(settings);
-    r.getSubreddit("lakers").editSettings({
+    r.getSubreddit("likwidtesting").editSettings({
       description: settings
     });
   });

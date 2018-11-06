@@ -37,8 +37,6 @@ module.exports = function getStandings() {
               teamStat.winPercent = stats[3].firstChild.data;
               teamStat.gamesBehind = stats[4].firstChild.data;
 
-              console.log(teamStat)
-
               returnJson.push(teamStat);
             }
           });
