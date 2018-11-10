@@ -5,6 +5,12 @@ const getGames = require("./getGames");
 const getRecord = require("./getRecord");
 const moment = require("moment-timezone");
 
+require("dotenv").config();
+
+if (!process.env.SUBREDDIT) {
+  throw console.error(`'SUBREDDIT' environment value not found!`);
+}
+
 const r = new snoowrap({
   userAgent: "app",
   clientId: "GufnVQldw0V4pw",
@@ -91,6 +97,7 @@ var monthsString = [
 getStandings()
   .then(standingArray => {
     standingArray.map((e, i) => {
+      // Standings /////////////////////////////////////////////////////////
       if (e.name) {
         standingsString += `${i + 1}|${e.name}|${e.wins}|${e.losses}|${
           e.gamesBehind
@@ -102,6 +109,7 @@ getStandings()
     return getPlayerStats();
   })
   .then(stats => {
+    // Player Stats /////////////////////////////////////////////////////////
     stats.map(c => {
       if (c.name) {
         statsString += `${c.name}|${c[3]}|${c[4]}|${c[7]}|${c[8]}\n`;
@@ -112,6 +120,7 @@ getStandings()
     return getGames();
   })
   .then(games => {
+    // Month schedule /////////////////////////////////////////////////////////
     const today = new Date();
     const numDaysInMonth = new Date(
       today.getFullYear(),
@@ -167,6 +176,7 @@ getStandings()
     return getGames();
   })
   .then(games => {
+    // Schedule on top /////////////////////////////////////////////////////////
     const today = new Date();
     const gameOnOrBeforeToday = games.filter(g => {
       return g.date <= today;
@@ -184,7 +194,7 @@ getStandings()
     } else if (i >= games.length - 3) {
       gamesToDisplay = games.splice(games.length - 7, 7);
     } else {
-      gamesToDisplay = games.splice(i - 2, 7);
+      gamesToDisplay = games.splice(i - 3, 7);
     }
 
     console.log(gamesToDisplay);
@@ -212,8 +222,8 @@ getStandings()
           ? "[W](#W)"
           : "[L](#L)"
         : c.isHome
-          ? "[home](#home)"
-          : "[away](#away)";
+        ? "[home](#home)"
+        : "[away](#away)";
       weekScheduleString += "\n";
     });
     weekScheduleString += "\n";
@@ -221,6 +231,7 @@ getStandings()
     return getRecord();
   })
   .then(record => {
+    // Record /////////////////////////////////////////////////////////
     recordString += `# Record ${record} \n\n`;
 
     return r.getSubreddit("lakers").getSettings("description");
@@ -243,7 +254,7 @@ getStandings()
       afterSplit;
 
     // console.log(settings);
-    r.getSubreddit("lakers").editSettings({
+    r.getSubreddit(process.env.SUBREDDIT).editSettings({
       description: settings
     });
   });
