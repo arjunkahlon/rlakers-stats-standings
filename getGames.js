@@ -1,5 +1,6 @@
 const cheerio = require("cheerio");
 const request = require("request");
+const moment = require("moment");
 
 module.exports = function getGames() {
   return new Promise((resolve, reject) => {
@@ -72,20 +73,21 @@ module.exports = function getGames() {
                 if (thirdCol.children[1]) {
                   gameInfo.score = thirdCol.children[1].firstChild.firstChild.data.trim();
                 }
-              } else {
-                // Time
-                const time_result = thirdCol.firstChild.firstChild.data;
-
-                gameHour = Number(time_result.split(":")[0]);
-                const ampm = time_result.split(" ")[1];
-                if (gameHour === 12) {
-                  gameHour = ampm === "AM" ? 0 : 12;
-                } else if (ampm === "PM") {
-                  gameHour += 12;
-                }
-
-                gameMinute = Number(time_result.split(":")[1].split(" ")[0]);
               }
+            } else {
+              // Time
+              const time_result =
+                thirdCol.firstChild.firstChild.firstChild.data;
+
+              gameHour = Number(time_result.split(":")[0]);
+              const ampm = time_result.split(" ")[1];
+              if (gameHour === 12) {
+                gameHour = ampm === "AM" ? 0 : 12;
+              } else if (ampm === "PM") {
+                gameHour += 12;
+              }
+
+              gameMinute = Number(time_result.split(":")[1].split(" ")[0]);
             }
 
             const dateGame = new Date(

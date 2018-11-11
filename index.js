@@ -181,12 +181,31 @@ getStandings()
     const gameOnOrBeforeToday = games.filter(g => {
       return g.date <= today;
     });
+    var gameToday = games.filter(g => {
+      return (
+        g.date.getMonth() == today.getMonth() &&
+        g.date.getFullYear() == today.getFullYear() &&
+        g.date.getDate() == today.getDate()
+      );
+    });
+    if (gameToday.length > 0) {
+      gameToday = gameToday[0];
+    }
+
+    console.log(gameToday);
 
     const lastGamePlayed = gameOnOrBeforeToday[gameOnOrBeforeToday.length - 1];
 
-    const i = games.indexOf(lastGamePlayed);
+    console.log(lastGamePlayed);
 
-    console.log(i);
+    const i =
+      games.indexOf(gameToday) !== -1
+        ? games.indexOf(gameToday)
+        : games.indexOf(lastGamePlayed);
+
+    console.log(games);
+    console.log(games.indexOf(gameToday));
+    console.log(games.indexOf(lastGamePlayed));
 
     var gamesToDisplay;
     if (i < 3) {
@@ -197,8 +216,6 @@ getStandings()
       gamesToDisplay = games.splice(i - 3, 7);
     }
 
-    console.log(gamesToDisplay);
-
     gamesToDisplay.map(c => {
       const ttr = teamToReddit.find(team => {
         return c.opponent === team.name;
@@ -207,8 +224,8 @@ getStandings()
       var stringDate = monthsString[c.date.getMonth()];
       stringDate += ` ${c.date.getDate()}`;
 
-      var momentDate = moment(c.date);
-      var time = momentDate.tz("America/Los_Angeles").format("h:mma");
+      const momentDate = moment(c.date);
+      const time = momentDate.tz("America/Los_Angeles").format("h:mma");
 
       var hour = c.date.getHours();
       hour = hour >= 12 ? hour - 12 : hour;
