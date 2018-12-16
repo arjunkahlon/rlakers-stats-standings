@@ -192,20 +192,20 @@ getStandings()
       gameToday = gameToday[0];
     }
 
-    console.log(gameToday);
+    // console.log(gameToday);
 
     const lastGamePlayed = gameOnOrBeforeToday[gameOnOrBeforeToday.length - 1];
 
-    console.log(lastGamePlayed);
+    // console.log(lastGamePlayed);
 
     const i =
       games.indexOf(gameToday) !== -1
         ? games.indexOf(gameToday)
         : games.indexOf(lastGamePlayed);
 
-    console.log(games);
-    console.log(games.indexOf(gameToday));
-    console.log(games.indexOf(lastGamePlayed));
+    // console.log(games);
+    // console.log(games.indexOf(gameToday));
+    // console.log(games.indexOf(lastGamePlayed));
 
     var gamesToDisplay;
     if (i < 3) {
@@ -270,7 +270,7 @@ getStandings()
       "#####[](/r)" +
       afterSplit;
 
-    // console.log(settings);
+    console.log(settings);
     r.getSubreddit(process.env.SUBREDDIT).editSettings({
       description: settings
     });

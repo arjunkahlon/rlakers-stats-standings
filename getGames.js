@@ -26,16 +26,30 @@ module.exports = function getGames() {
 
           var returnJson = [];
 
-          var rowsOfInfo = $("td")
+          var rowsOfInfo = $("tr")
             .filter(function(i, el) {
               return (
-                $(this).text() === "Regular Season" ||
-                $(this).text() === "Preseason"
+                $(this).hasClass("filled Table2__tr Table2__tr--sm Table2__even") ||
+                $(this).hasClass("Table2__tr Table2__tr--sm Table2__even")               
               );
             })
-            .parent()
-            .next()
-            .nextAll();
+
+            console.log(rowsOfInfo)
+
+            // if (rowsOfInfo.length === 0){
+            //   rowsOfInfo = $("div")
+            //   .filter(function(i, el) {
+            //     return (
+            //       $(this).text() === "Regular Season" ||
+            //       $(this).text() === "Preseason"
+            //     );
+            //   })
+            // }
+
+            // rowsOfInfo = rowsOfInfo
+            // .parent()
+            // .next()
+            // .nextAll();
 
           rowsOfInfo.map((i, e) => {
             const columnsInRow = e.children;
