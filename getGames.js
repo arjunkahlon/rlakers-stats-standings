@@ -34,23 +34,6 @@ module.exports = function getGames() {
               );
             })
 
-            console.log(rowsOfInfo)
-
-            // if (rowsOfInfo.length === 0){
-            //   rowsOfInfo = $("div")
-            //   .filter(function(i, el) {
-            //     return (
-            //       $(this).text() === "Regular Season" ||
-            //       $(this).text() === "Preseason"
-            //     );
-            //   })
-            // }
-
-            // rowsOfInfo = rowsOfInfo
-            // .parent()
-            // .next()
-            // .nextAll();
-
           rowsOfInfo.map((i, e) => {
             const columnsInRow = e.children;
             const gameInfo = {};
