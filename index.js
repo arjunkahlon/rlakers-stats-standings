@@ -110,11 +110,12 @@ getStandings()
   })
   .then(stats => {
     // Player Stats /////////////////////////////////////////////////////////
-    stats.map(c => {
-      if (c.name) {
-        statsString += `${c.name}|${c[3]}|${c[4]}|${c[7]}|${c[8]}\n`;
-      }
-    });
+    // Player | MPG | PPG | RPG | APG
+    for (var key in stats){
+      console.log(key)
+      statsString += `${key}|${stats[key].MPG}|${stats[key].PPG}|${stats[key].RPG}|${stats[key].APG}|\n`;
+    }
+
     statsString += "\n";
 
     return getGames();

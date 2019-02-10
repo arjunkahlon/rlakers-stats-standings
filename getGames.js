@@ -29,10 +29,24 @@ module.exports = function getGames() {
           var rowsOfInfo = $("tr")
             .filter(function(i, el) {
               return (
-                $(this).hasClass("filled Table2__tr Table2__tr--sm Table2__even") ||
-                $(this).hasClass("Table2__tr Table2__tr--sm Table2__even")               
+                $(this).hasClass("Table2__tr Table2__tr--sm Table2__even")
               );
             })
+
+            // if (rowsOfInfo.length === 0){
+            //   rowsOfInfo = $("div")
+            //   .filter(function(i, el) {
+            //     return (
+            //       $(this).text() === "Regular Season" ||
+            //       $(this).text() === "Preseason"
+            //     );
+            //   })
+            // }
+
+            // rowsOfInfo = rowsOfInfo
+            // .parent()
+            // .next()
+            // .nextAll();
 
           rowsOfInfo.map((i, e) => {
             const columnsInRow = e.children;
@@ -76,15 +90,18 @@ module.exports = function getGames() {
               const time_result =
                 thirdCol.firstChild.firstChild.firstChild.data;
 
-              gameHour = Number(time_result.split(":")[0]);
-              const ampm = time_result.split(" ")[1];
-              if (gameHour === 12) {
-                gameHour = ampm === "AM" ? 0 : 12;
-              } else if (ampm === "PM") {
-                gameHour += 12;
+              if (time_result !== "LIVE"){
+                gameHour = Number(time_result.split(":")[0]);
+                const ampm = time_result.split(" ")[1];
+                if (gameHour === 12) {
+                  gameHour = ampm === "AM" ? 0 : 12;
+                } else if (ampm === "PM") {
+                  gameHour += 12;
+                }
+                
+                console.log(time_result)
+                gameMinute = Number(time_result.split(":")[1].split(" ")[0]);
               }
-
-              gameMinute = Number(time_result.split(":")[1].split(" ")[0]);
             }
 
             const dateGame = new Date(

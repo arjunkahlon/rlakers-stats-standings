@@ -8,31 +8,66 @@ module.exports = function getPlayerStats() {
       "http://www.espn.com/nba/team/stats/_/name/lal",
       (err, res, html) => {
         if (!err) {
-          var $ = cheerio.load(html);
+          const $ = cheerio.load(html);
 
-          var returnJson = [];
+          var returnJson = {};
 
-          var varTr = $("td")
+          const vtops = $("div")
             .filter(function(i, el) {
-              return $(this).text() === "GAME STATISTICS";
+              return $(this).text() === "Game Statistics";
             })
-            .parent()
             .next()
-            .nextAll();
-
-          varTr.map((i, e) => {
-            var varTd = e.children;
-            var singlePlayerStat = {};
-            varTd.map((cur, ind) => {
-              if (cur.firstChild.firstChild) {
-                singlePlayerStat.name = cur.firstChild.firstChild.data;
-                return;
-              }
-              singlePlayerStat[ind] = cur.firstChild.data;
+            .find("td")
+            .filter(function(i, el) {
+              return $(el).attr('class') === "v-top";
             });
-            returnJson.push(singlePlayerStat);
-          });
 
+          console.log(`vtops: ${vtops.length}`)
+
+
+          const vtopNames = vtops[0];
+          const vtopAllStats = vtops[1];
+
+          // Get Names
+          const trNames = $(vtopNames).find("tbody").find("tr")
+
+          trNames.each((i, el) => {
+            const name = $(el).find("a").text()
+            if (name.length > 0){
+              returnJson[name] = {}
+            }
+          })
+          console.log("===== Names")
+          console.log(returnJson)
+
+          // Get stats
+          const headerKey = ['GP', 'GS', 'MPG', 'PPG', 'ORPG', 'DRPG', 'RPG', 'APG', 'STLPG', 'BLKPG', 'TOPG', 'PFPG', 'AST/TO', 'PER']
+
+          const tbodyStats = $(vtopAllStats)
+          .find("tbody")
+          .filter((i, el) => {
+            return $(el).attr('class') === 'Table2__tbody'
+          })
+          console.log(`tbodyStats: ${tbodyStats.length}`)
+
+          const playerStatRows = $(tbodyStats).find('tr')
+          console.log(`PlayerStatCount: ${playerStatRows.length}`)
+          playerStatRows.each((rowInd, el) => {
+            currentStatsJson = {}
+            const playerStatColumns = $(el).find('td')
+            var jsonKey = Object.keys(returnJson)[rowInd]
+
+            if(returnJson[jsonKey]){
+              playerStatColumns.each((colInd ,el) => {
+                if(returnJson[jsonKey]){
+                  currentStatsJson[headerKey[colInd]] = $(el).text()
+                }
+              })
+              returnJson[jsonKey] = currentStatsJson
+            }
+          })
+
+          console.log(returnJson)
           resolve(returnJson);
         }
       }
