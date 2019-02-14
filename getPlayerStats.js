@@ -8,7 +8,6 @@ module.exports = function getPlayerStats() {
       "http://www.espn.com/nba/team/stats/_/name/lal",
       (err, res, html) => {
         if (!err) {
-          console.log(html)
           const $ = cheerio.load(html);
 
           var returnJson = {};
