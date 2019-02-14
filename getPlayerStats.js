@@ -8,16 +8,12 @@ module.exports = function getPlayerStats() {
       "http://www.espn.com/nba/team/stats/_/name/lal",
       (err, res, html) => {
         if (!err) {
+          console.log(html)
           const $ = cheerio.load(html);
 
           var returnJson = {};
 
-          const vtops = $("div")
-            .filter(function(i, el) {
-              return $(this).text() === "Game Statistics";
-            })
-            .next()
-            .find("td")
+          const vtops = $("td")
             .filter(function(i, el) {
               return $(el).attr('class') === "v-top";
             });
