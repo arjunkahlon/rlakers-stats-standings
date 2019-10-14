@@ -101,7 +101,7 @@ getStandings()
       if (e.name) {
         standingsString += `${i + 1}|${e.name}|${e.wins}|${e.losses}|${
           e.gamesBehind
-        }\n`;
+          }\n`;
       }
     });
     standingsString += "\n";
@@ -111,7 +111,7 @@ getStandings()
   .then(stats => {
     // Player Stats /////////////////////////////////////////////////////////
     // Player | MPG | PPG | RPG | APG
-    for (var key in stats){
+    for (var key in stats) {
       console.log(key)
       statsString += `${key}|${stats[key].MPG}|${stats[key].PPG}|${stats[key].RPG}|${stats[key].APG}|\n`;
     }
@@ -182,6 +182,7 @@ getStandings()
     const gameOnOrBeforeToday = games.filter(g => {
       return g.date <= today;
     });
+
     var gameToday = games.filter(g => {
       return (
         g.date.getMonth() == today.getMonth() &&
@@ -193,28 +194,24 @@ getStandings()
       gameToday = gameToday[0];
     }
 
-    // console.log(gameToday);
-
     const lastGamePlayed = gameOnOrBeforeToday[gameOnOrBeforeToday.length - 1];
-
-    // console.log(lastGamePlayed);
 
     const i =
       games.indexOf(gameToday) !== -1
         ? games.indexOf(gameToday)
         : games.indexOf(lastGamePlayed);
 
-    // console.log(games);
-    // console.log(games.indexOf(gameToday));
-    // console.log(games.indexOf(lastGamePlayed));
-
     var gamesToDisplay;
-    if (i < 3) {
-      gamesToDisplay = games.splice(0, 7);
-    } else if (i >= games.length - 3) {
-      gamesToDisplay = games.splice(games.length - 7, 7);
-    } else {
-      gamesToDisplay = games.splice(i - 3, 7);
+    if (games.length > 6) {
+      if (i < 3) {
+        gamesToDisplay = games.splice(0, 7);
+      } else if (i >= games.length - 3) {
+        gamesToDisplay = games.splice(games.length - 7, 7);
+      } else {
+        gamesToDisplay = games.splice(i - 3, 7);
+      }
+    }else{
+      gamesToDisplay = games
     }
 
     gamesToDisplay.map(c => {
@@ -240,8 +237,8 @@ getStandings()
           ? "[W](#W)"
           : "[L](#L)"
         : c.isHome
-        ? "[home](#home)"
-        : "[away](#away)";
+          ? "[home](#home)"
+          : "[away](#away)";
       weekScheduleString += "\n";
     });
     weekScheduleString += "\n";

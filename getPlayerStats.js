@@ -12,19 +12,14 @@ module.exports = function getPlayerStats() {
 
           var returnJson = {};
 
-          const vtops = $("td")
-            .filter(function(i, el) {
-              return $(el).attr('class') === "v-top";
-            });
+          const Tables = $('table')
+          console.log(`Tables: ${Tables.length}`)
 
-          console.log(`vtops: ${vtops.length}`)
-
-
-          const vtopNames = vtops[0];
-          const vtopAllStats = vtops[1];
+          const vNames = Tables[0];
+          const vAllStats = Tables[1];
 
           // Get Names
-          const trNames = $(vtopNames).find("tbody").find("tr")
+          const trNames = $(vNames).find("tbody").find("tr")
 
           trNames.each((i, el) => {
             const name = $(el).find("a").text()
@@ -38,26 +33,24 @@ module.exports = function getPlayerStats() {
           // Get stats
           const headerKey = ['GP', 'GS', 'MPG', 'PPG', 'ORPG', 'DRPG', 'RPG', 'APG', 'STLPG', 'BLKPG', 'TOPG', 'PFPG', 'AST/TO', 'PER']
 
-          const tbodyStats = $(vtopAllStats)
-          .find("tbody")
-          .filter((i, el) => {
-            return $(el).attr('class') === 'Table2__tbody'
-          })
+          const tbodyStats = $(vAllStats).find('tbody')
           console.log(`tbodyStats: ${tbodyStats.length}`)
 
           const playerStatRows = $(tbodyStats).find('tr')
           console.log(`PlayerStatCount: ${playerStatRows.length}`)
-          playerStatRows.each((rowInd, el) => {
+
+          playerStatRows.each((rowInd, rEl) => {
             currentStatsJson = {}
-            const playerStatColumns = $(el).find('td')
+            const playerStatColumns = $(rEl).find('td')
             var jsonKey = Object.keys(returnJson)[rowInd]
 
             if(returnJson[jsonKey]){
-              playerStatColumns.each((colInd ,el) => {
-                if(returnJson[jsonKey]){
-                  currentStatsJson[headerKey[colInd]] = $(el).text()
-                }
+              // Map all stat columns for player
+              playerStatColumns.each((colInd ,cEl) => {
+                currentStatsJson[headerKey[colInd]] = $(cEl).text()
               })
+
+              // Set stats to player
               returnJson[jsonKey] = currentStatsJson
             }
           })

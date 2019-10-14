@@ -27,26 +27,11 @@ module.exports = function getGames() {
           var returnJson = [];
 
           var rowsOfInfo = $("tr")
-            .filter(function(i, el) {
-              return (
-                $(this).hasClass("Table2__tr Table2__tr--sm Table2__even")
-              );
+            .filter((rowInd, el) => {
+              const text = el.children[1].firstChild.firstChild.data
+              return text != "Opponent"
             })
-
-            // if (rowsOfInfo.length === 0){
-            //   rowsOfInfo = $("div")
-            //   .filter(function(i, el) {
-            //     return (
-            //       $(this).text() === "Regular Season" ||
-            //       $(this).text() === "Preseason"
-            //     );
-            //   })
-            // }
-
-            // rowsOfInfo = rowsOfInfo
-            // .parent()
-            // .next()
-            // .nextAll();
+          console.log('Rows', rowsOfInfo.length)
 
           rowsOfInfo.map((i, e) => {
             const columnsInRow = e.children;
@@ -126,9 +111,6 @@ module.exports = function getGames() {
             returnJson.push(gameInfo);
           });
 
-          returnJson = returnJson.filter(c => {
-            return c.opponent;
-          });
           resolve(returnJson);
         }
       }
