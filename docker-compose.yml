@@ -1,0 +1,6 @@
+version: '3'
+services:
+  rlakers-utils:
+    restart: always
+    image: node
+    build: .
