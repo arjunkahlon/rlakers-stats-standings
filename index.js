@@ -141,12 +141,14 @@ getStandings()
     // Go through days and post games if any
     var pipeCount = firstDayOfMonth;
     for (var day = 1; day <= numDaysInMonth; day++) {
-      var foundGame = games.find(game => {
-        return (
-          game.date.getDate() === day &&
-          game.date.getMonth() === today.getMonth()
-        );
-      });
+      let foundGame = games
+        .filter(game => game.date instanceof Date)
+        .find(game => {
+          return (
+            game.date.getDate() === day &&
+            game.date.getMonth() === today.getMonth()
+          );
+        });
 
       monthScheduleString += `${day}`.padStart(2, "0");
 
@@ -183,21 +185,20 @@ getStandings()
       return g.date <= today;
     });
 
-    var gameToday = games.filter(g => {
-      return (
-        g.date.getMonth() == today.getMonth() &&
-        g.date.getFullYear() == today.getFullYear() &&
-        g.date.getDate() == today.getDate()
-      );
-    });
-    if (gameToday.length > 0) {
-      gameToday = gameToday[0];
-    }
+    var gameToday = games
+      .filter(g => g.date instanceof Date)
+      .find(g => {
+        return (
+          g.date.getMonth() == today.getMonth() &&
+          g.date.getFullYear() == today.getFullYear() &&
+          g.date.getDate() == today.getDate()
+        );
+      });
 
     const lastGamePlayed = gameOnOrBeforeToday[gameOnOrBeforeToday.length - 1];
 
     const i =
-      games.indexOf(gameToday) !== -1
+      gameToday
         ? games.indexOf(gameToday)
         : games.indexOf(lastGamePlayed);
 
@@ -210,7 +211,7 @@ getStandings()
       } else {
         gamesToDisplay = games.splice(i - 3, 7);
       }
-    }else{
+    } else {
       gamesToDisplay = games
     }
 
@@ -219,19 +220,22 @@ getStandings()
         return c.opponent === team.name;
       });
 
-      var stringDate = monthsString[c.date.getMonth()];
-      stringDate += ` ${c.date.getDate()}`;
+      let stringDate = c.date
+      let time;
+      if (c.date instanceof Date) {
+        stringDate = `${monthsString[c.date.getMonth()]} ${c.date.getDate()}`;
 
-      const momentDate = moment(c.date);
-      const time = momentDate.tz("America/Los_Angeles").format("h:mma");
+        const momentDate = moment(c.date);
+        time = momentDate.tz("America/Los_Angeles").format("h:mma");
 
-      var hour = c.date.getHours();
-      hour = hour >= 12 ? hour - 12 : hour;
-      hour = hour === 0 ? 12 : hour;
+        let hour = c.date.getHours();
+        hour = hour >= 12 ? hour - 12 : hour;
+        hour = hour === 0 ? 12 : hour;
+      }
 
       weekScheduleString += `* [](/r/${ttr.reddit}) `;
       weekScheduleString += `*${stringDate}* `;
-      weekScheduleString += c.score ? `**${c.score}** ` : `**${time}** `;
+      weekScheduleString += c.score ? `**${c.score}** ` : `**${time || '--'}** `;
       weekScheduleString += c.hasOwnProperty("isWin")
         ? c.isWin
           ? "[W](#W)"

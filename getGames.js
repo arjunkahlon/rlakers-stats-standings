@@ -60,7 +60,7 @@ module.exports = function getGames() {
             var gameHour = 0;
             var gameMinute = 0;
 
-            if (thirdCol.firstChild.firstChild.type === "text") {
+            if (thirdCol && thirdCol.firstChild && thirdCol.firstChild.firstChild && thirdCol.firstChild.firstChild.type === "text") {
               // If game has W/L and score
               if (thirdCol.firstChild.firstChild.data.indexOf(":") === -1) {
                 // Result
@@ -72,20 +72,21 @@ module.exports = function getGames() {
               }
             } else {
               // Time
-              const time_result =
-                thirdCol.firstChild.firstChild.firstChild.data;
+              const time_result = thirdCol.firstChild.type === 'text' ? thirdCol.firstChild.data : thirdCol.firstChild.firstChild.firstChild.data
+              if (thirdCol.firstChild.type !== 'text') {
+                  gameHour = Number(time_result.split(":")[0]);
+                  const ampm = time_result.split(" ")[1];
+                  if (gameHour === 12) {
+                    gameHour = ampm === "AM" ? 0 : 12;
+                  } else if (ampm === "PM") {
+                    gameHour += 12;
+                  }
 
-              if (time_result !== "LIVE"){
-                gameHour = Number(time_result.split(":")[0]);
-                const ampm = time_result.split(" ")[1];
-                if (gameHour === 12) {
-                  gameHour = ampm === "AM" ? 0 : 12;
-                } else if (ampm === "PM") {
-                  gameHour += 12;
-                }
-                
+                  console.log(time_result)
+                  gameMinute = Number(time_result.split(":")[1].split(" ")[0]);
+              }else{
+                gameInfo.date = time_result
                 console.log(time_result)
-                gameMinute = Number(time_result.split(":")[1].split(" ")[0]);
               }
             }
 
@@ -97,7 +98,7 @@ module.exports = function getGames() {
               gameMinute
             );
 
-            gameInfo.date = dateGame;
+            gameInfo.date = gameInfo.date ?  gameInfo.date : dateGame;
 
             if (columnsInRow[1].firstChild.firstChild.firstChild) {
               gameInfo.isHome =
