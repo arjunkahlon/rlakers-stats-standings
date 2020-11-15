@@ -1,6 +1,6 @@
 div.side {
-padding: 628px 0 0 0; /* sidebarimg height + 5px*/
-background-image:url(%%sidebar%%)!important;
+padding: 449px 0 0 0; /* sidebarimg height + 5px*/
+background-image:url(%%sidebar2010%%)!important;
 width:300px;
 background-size: contain;
 background-position:0 0!important;
@@ -32,15 +32,6 @@ top: 415px;}*/
  border-radius: 3px;
 }
 
-#header-bottom-left {
-/* background:url(%%kobe%%)!important; */
-position:absolute; 
-height:135px;
-left: 0px;
-right: 0px;
-opacity: .4
-z-index: 1;
-}
 
 
 body {
@@ -82,7 +73,7 @@ text-indent:-9999px;
  position: absolute;
  top: 24px;
  background-position: -120px -617px;
- left: 375px;
+ left: 440px;
 text-indent:-9999px;
 }
 
@@ -143,7 +134,7 @@ color:#6338A5!important
 }
 
 .md table {
-width:94%;
+width:100%;
 }
 
 .md td,.md th {
@@ -224,6 +215,15 @@ font-size:0;
  margin-left: -67px;
  top: -1px;
  z-index:1;
+}
+
+#header-bottom-left {
+position:absolute; 
+height:135px;
+left: 0px;
+right: 0px;
+opacity: .4
+z-index: 1;
 }
 
 .res-nightmode #header-bottom-left, html:lang(nm) #header-bottom-left {
@@ -407,7 +407,7 @@ box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 }
 
 .res-nightmode .listing-page .linklisting .thing, html:lang(nm) .listing-page .linklisting .thing {
-background-color:rgba(61,61,61,1)!important;
+background-color:rgba(17,17,17,1)!important;
 margin-bottom:0!important;
 transition:.2s!important;
 padding:0!important;
@@ -985,41 +985,42 @@ height: 35px;
 background-position: -60px -567px;
 }
 
-.flair.flair-randle{
+.flair.flair-kuzma{
 width: 30px;
 height: 35px;
 background-position: -90px -567px;
 }
 
-.flair.flair-it{
+.flair.flair-kcp{
 width: 30px;
 height: 35px;
 background-position: -120px -567px;
 }
 
-.flair.flair-frye {
+.flair.flair-hart{
 width: 30px;
 height: 35px;
 background-position: -150px -567px;
 }
 
-.flair.flair-kuzma{
+.flair.flair-wagner{
 width: 30px;
 height: 35px;
 background-position: -180px -567px;
 }
 
-.flair.flair-lopez{
+.flair.flair-svi{
 width: 30px;
 height: 35px;
 background-position: -210px -567px;
 }
 
-.flair.flair-kcp{
+.flair.flair-lebron{
 width: 30px;
 height: 35px;
 background-position: -240px -567px;
 }
+
 
 .flair.flair-hawks{
 position: relative;
@@ -1273,6 +1274,22 @@ color:#BE8100;
 .linkflair-news .linkflairlabel {
 border: solid 1px;
 color:#C75D5D;
+}
+
+.thing.linkflair-highlights > .thumbnail:after {
+height: 14px;
+width: 55px;
+background-position: -168px -120px!important;
+opacity: 1;
+background-color: #FFFFFF66;
+}
+
+.thing.linkflair-highlightsfull > .thumbnail:after {
+height: 55px;
+width: 55px;
+background-position: -388px 0px!important;
+opacity: 1;
+background-color: #FFFFFF66;
 }
 
 body.moderator .flairselector .linkflair-gamethread { 
@@ -1920,7 +1937,7 @@ text-align:left;
 }
 
 .res-nightmode a, html:lang(nm) a {
-color:#C19026!important;
+color:#9c6c00!important;
 }
 
 .res-nightmode .md, html:lang(nm) .md{
@@ -2033,6 +2050,9 @@ font-size: 10px;
  text-align: right;
 }
 
+html:lang(nm) .link.promotedlink.promoted {
+ background-color: #3D3D3D;
+}
 
 /* -- Schedule --*/
 .side h6+h2 {
@@ -2096,10 +2116,6 @@ background: rgba(142, 142, 142, 1)!important;
  border-radius: 2px;
  box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.06);
  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-html:lang(nm) .link.promotedlink.promoted {
- background-color: #3D3D3D;
 }
 
 .side h6+h2+ul>li>a:nth-of-type(1):after {
@@ -2316,6 +2332,7 @@ background-position:-875px -637px !important;
  border-radius: 16px;
 }
 
+
 /* -- Official Links -- */
 .side h6+h3 {
 width: 294px!important;
@@ -2346,7 +2363,7 @@ position: relative;
 float:left;
 height:32px;
 width:32px;
-margin-right:8px !important;
+margin-right:16px !important;
 list-style: none;
 }
 
@@ -2355,7 +2372,6 @@ float:left;
 background:url(%%sprite%%);
 height:32px;
 width:32px;
-margin-right:4px !important;
 text-indent:-9999px;
 }
 
@@ -2375,11 +2391,11 @@ background-position: -472px -325px;
 background-position: -504px -325px;
 }
 
-.side h6+h3+ul>li>a[href="http://twitter.com/#!/lakers"] {
+.side h6+h3+ul>li>a[href="http://twitter.com/lakers"] {
 background-position: -472px -357px;
 }
 
-.side h6+h3+ul>li>a[href="http://twitter.com/#!/lakers"]:hover {
+.side h6+h3+ul>li>a[href="http://twitter.com/lakers"]:hover {
 background-position: -504px -357px;
 }
 
@@ -2534,7 +2550,161 @@ background-position:-472px -255px;
 background-position:-504px -255px;
 }
 
-/* .side h6+h5 is unused*/
+/* Monthly Schedule */
+.side h6+h5{
+width: 294px!important;
+background-color: #F5AF1B!important;
+color: #000!important;
+position: relative!important;
+display: block!important;
+font-weight: 600 !important;
+padding: 8px 4px !important;
+font-size: 18px !important;
+left:-9px;
+text-decoration: none;
+}
+
+html:lang(nm) .side h6+h5{
+background-color: #4A2583!important;
+color:#fff !important;
+}
+
+.side h6+h5+table>tbody>tr>td {
+height:40px;
+width:40px;
+text-align: center;
+}
+
+.side h6+h5+table>tbody>tr>td>a:after {
+height:25px!important;
+width:25px!important;
+background:url(%%sprite%%)!important;
+content:""!important;
+display:block;
+background-position:-725px -637px !important;
+position: relative;
+left: 5px;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/atlantahawks"]:after {
+background-position:0 -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/bostonceltics"]:after {
+background-position:-25px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/gonets"]:after {
+background-position:-50px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/charlottehornets"]:after {
+background-position:-75px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/chicagobulls"]:after {
+background-position:-100px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/clevelandcavs"]:after {
+background-position:-125px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/mavericks"]:after {
+background-position:-150px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/denvernuggets"]:after {
+background-position:-175px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/detroitpistons"]:after {
+background-position:-200px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/warriors"]:after {
+background-position:-225px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/rockets"]:after {
+background-position:-250px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/pacers"]:after {
+background-position:-275px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/laclippers"]:after {
+background-position:-300px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/memphisgrizzlies"]:after {
+background-position:-325px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/heat"]:after {
+background-position:-350px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/mkebucks"]:after {
+background-position:-375px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/timberwolves"]:after {
+background-position:-400px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/nolapelicans"]:after {
+background-position:-425px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/nyknicks"]:after {
+background-position:-450px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/thunder"]:after {
+background-position:-475px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/orlandomagic"]:after {
+background-position:-500px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/sixers"]:after {
+background-position:-525px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/suns"]:after {
+background-position:-550px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/ripcity"]:after {
+background-position:-575px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/kings"]:after {
+background-position:-600px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/nbaspurs"]:after {
+background-position:-625px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/torontoraptors"]:after {
+background-position:-650px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/utahjazz"]:after {
+background-position:-675px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/washingtonwizards"]:after {
+background-position:-700px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="#draft"]:after {
+background-position:-750px -637px !important;
+}
 
 /* Social Media*/
 .side h6+h6{
