@@ -1,0 +1,3318 @@
+div.side {
+padding: 449px 0 0 0; /* sidebarimg height + 5px*/
+background-image:url(%%sidebar12-2020%%)!important;
+width:300px;
+background-size: contain;
+background-position:0 0!important;
+background-repeat:no-repeat!important;
+border-radius:3px;
+right:-8px;
+margin:42px 10px 0;
+}
+/*div.side:after {
+content:" Happy 20th birthday, Zublocka!";
+color:#fff;
+font-size:11.5px;
+min-width:295px;
+padding-left:5px;
+background-color: rgba(74, 37, 131, .75);
+position: absolute;
+top: 415px;}*/
+
+.side a[href="#subheader"] {
+ /* background: url(%%subheader%%); */
+ height: 0;
+ /* height: 135px; */
+ position: absolute;
+ top: 232px;
+ left: 29px;
+ text-indent: -9999px;
+ right: 30px;
+ border-radius: 3px;
+}
+
+
+
+body {
+ margin-left: 20px;
+ margin-right: 20px;
+ background-color: rgba(240,240,240,0.8);
+ background-attachment: fixed;
+ margin-top: 154px;
+ padding-top: 42px;
+}
+
+.organic-listing{
+top: 10px !important;
+}
+
+html:lang(nm) div.side{
+background-color:rgb(29, 29, 29);
+}
+
+.icon-menu a{
+background-color:transparent !important;
+}
+
+.side a[href="http://www.reddit.com/r/lakers"] {
+ background: url(%%sprite%%);
+ height: 20px;
+ width: 20px;
+ position: absolute;
+ top: 24px;
+ background-position: -140px -617px;
+left: 440px;
+text-indent:-9999px;
+}
+
+.side a[href="http://nm.reddit.com/r/lakers"] {
+ background: url(%%sprite%%);
+ height: 20px;
+ width: 20px;
+ position: absolute;
+ top: 24px;
+ background-position: -120px -617px;
+ left: 440px;
+text-indent:-9999px;
+}
+
+.linkinfo{
+background-color:transparent;
+}
+html:lang(en) .side a[href="http://www.reddit.com/r/lakers"] {
+display:none;
+}
+
+html:lang(nm) .side a[href="http://nm.reddit.com/r/lakers"] {
+display:none;
+}
+
+html{
+background-image:url(%%bg%%)!important;
+background-color:#000;
+background-attachment:fixed;
+}
+
+html:lang(nm), .res-nightmode html{
+background-image:url(%%nmbg%%)!important;
+background-repeat:repeat-x;
+}
+
+#header {
+height:150px;
+top:0px;
+position:absolute;
+left:0;
+right:0;
+border-bottom:0;
+background-color:transparent;
+z-index:auto;
+}
+
+#header-img {
+position: absolute;
+bottom: 0;
+right: 383px;
+height: 50px;
+width: 40px;
+z-index:2;
+}
+
+html:lang(nm) body {
+background-color: rgba(0, 0, 0, 0.7);
+color:white;
+}
+
+.disabled .morelink,.disabled .morelink:hover {
+width:0;
+}
+
+a {
+color:#4A2583!important;
+color:#6338A5!important
+}
+
+.md table {
+width:100%;
+}
+
+.md td,.md th {
+border:1px solid rgba(81,50,136,0.3);
+padding:1px 3px;
+}
+
+.md tr:hover {
+background:#F5AF1B;
+border-radius:0;
+}
+
+.md table th {
+background-color:#4A2583;
+border-radius:1px;
+color:#fafafa;
+font-size:110%;
+font-weight:700;
+text-align:center;
+text-shadow:1px 1px 0 #27262c;
+padding:.5em;
+}
+
+.sr-bar a {
+color:#ffffff!important;
+font-size:9px!important;
+}
+
+#RESShortcutsViewport a:after{
+display:none;
+}
+
+#sr-header-area, .res-nightmode #sr-header-area, html:lang(nm) #sr-header-area {
+background: #4A2583!important;
+top: 0!important;
+position:relative;
+}
+
+#sr-header-area a.RESShortcutsCurrentSub, #RESSubredditGroupDropdown .RESShortcutsCurrentSub a{
+color:rgb(255, 173, 0) !important;
+font-weight: bold;
+}
+
+#sr-header-area .sr-list {
+border:0;
+margin:0 0 0 5px;
+}
+
+#sr-more-link {
+ color: #fff!important;
+ background: Transparent;
+}
+
+.dropdown.srdrop .selected {
+color:#fff;
+text-indent:-9999px;
+}
+
+.redditname a {
+float:right;
+font-size:0;
+}
+
+.pagename {
+font-size:0;
+}
+
+.pagename a {
+ background:url(%%sprite%%) no-repeat center center;
+ background-position: -328px -116px;
+ width: 135px;
+ left: 50%;
+ height: 135px;
+ position: absolute;
+ opacity: 1;
+ transition: opacity .2s;
+ font-size: 0;
+ margin-left: -67px;
+ top: -1px;
+ z-index:1;
+}
+
+#header-bottom-left {
+position:absolute; 
+height:135px;
+left: 0px;
+right: 0px;
+opacity: .4
+z-index: 1;
+}
+
+.res-nightmode #header-bottom-left, html:lang(nm) #header-bottom-left {
+background:transparent;
+}
+
+#header-bottom-left .tabmenu {
+position:absolute;
+float:left;
+top:134px;
+left:15px;
+right:15px;
+height:34px;
+background:#F5AF1B;
+margin-top:0;
+padding-left:5px;
+box-shadow: 0px 3px 0px rgba(0,0,0,0.15);
+border-radius: 0 0 3px 3px;
+}
+
+.res-nightmode #header, html:lang(nm) #header {
+background:transparent;
+}
+
+.res-nightmode #header-bottom-left .tabmenu, html:lang(nm) #header-bottom-left .tabmenu {
+background:#4A2583;
+}
+
+.res-nightmode #header-bottom-left .tabmenu a, html:lang(nm) #header-bottom-left .tabmenu a {
+color: #F5AF1B !important;
+opacity: 0.7;
+}
+
+#header-bottom-left .tabmenu li{
+margin:0;
+}
+
+#header-bottom-left .tabmenu li a {
+position: relative;
+top: 9px;
+background: transparent;
+font-size: 11px;
+transition: .2s;
+opacity: .5;
+margin: 3px;
+padding: 0;
+text-transform: uppercase;
+font-weight: normal;
+}
+
+#header-bottom-left .tabmenu li.selected a {
+border:0;
+opacity:1;
+padding: 6px;
+background-color: #fff;
+border-radius: 3px;
+z-index:inherit;
+font-weight: bold;
+box-shadow: 0px 3px 0px rgba(0,0,0,0.16);
+}
+
+html:lang(nm) #header-bottom-left .tabmenu li.selected a{
+background-color:#000;
+}
+
+#header-bottom-right, .res-nightmode #header-bottom-right, html:lang(nm) #header-bottom-right {
+position:absolute;
+right:24px;
+top:155px!important;
+background-color:transparent;
+}
+
+#header-bottom-right a {
+color:#4A2583!important;
+transition:.2s;
+}
+
+.res-nightmode #header-bottom-right a, html:lang(nm) #header-bottom-right a {
+color:#F5AF1B!important;
+transition:.5s;
+}
+
+#header-bottom-right a:hover {
+color:#fff;
+transition:.5s;
+}
+
+#mail {
+background-image:url(%%sprite%%)!important;
+width:16px;
+height:16px;
+opacity:.5;
+background-position:-15px -145px!important;
+top:5px !important;
+}
+
+.res-nightmode #mail, html:lang(nm) #mail {
+background-position:0 -145px!important;
+}
+
+#modmail {
+background-image:url(%%sprite%%)!important;
+width:15px;
+height:15px;
+background-repeat:no-repeat;
+opacity:.25;
+background-position:-45px -145px!important;
+}
+
+.res-nightmode #modmail, html:lang(nm) #modmail {
+background-position:-30px -145px!important;
+}
+
+#mail.havemail {
+opacity:1 !important;
+background-position:-15px -160px !important;
+}
+
+#modmail.havemail{
+background-position:-45px -160px !important;
+opacity:1 !important;
+}
+
+.pref-lang {
+height:15px;
+width:15px;
+font-size:0;
+display:inline-block;
+background-image:url(%%sprite%%)!important;
+background-position:-75px -160px!important;
+position:relative;
+top:-6px;
+}
+
+.es-nightmode .pref-lang, , html:lang(nm) .pref-lang {
+background-position:-60px -160px!important;
+}
+
+.loggedin #header-bottom-right .logout a {
+height:15px;
+width:15px;
+font-size:0;
+display:inline-block;
+background-image:url(%%sprite%%)!important;
+background-position:-105px -160px!important;
+position:relative;
+top:-6px;
+}
+
+.content {
+ margin-top: 0px;
+ background-position: center;
+ padding-top: 30px;
+ padding-right: 305px;
+ padding-bottom: 16px;
+}
+
+.content> h1 {
+ position: relative;
+ left: 10px;
+}
+
+.sitetable {
+margin-left:8px;
+margin-right:8px;
+margin-top: 15px;
+}
+
+.listing-page .linklisting .thing {
+background-color:#fff;
+margin-bottom:4px!important;
+transition:.2s!important;
+margin:8px 0!important;
+padding:0!important;
+box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.06);
+border-radius: 3px;
+}
+
+.listing-page .linklisting .thing:hover {
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+.res-nightmode .listing-page .linklisting .thing, html:lang(nm) .listing-page .linklisting .thing {
+background-color:rgba(17,17,17,1)!important;
+margin-bottom:0!important;
+transition:.2s!important;
+padding:0!important;
+}
+
+.listing-page .linklisting .thing img {
+margin-left:3px;
+}
+
+.listing-page .linklisting .thing.stickied {
+border-radius: 3px;
+ box-shadow: 0px 12px 5px rgba(0, 0, 0, 0.15);
+ width: 100.7%;
+ position: relative;
+ left: -5px;
+}
+
+.link.last-clicked {
+ border: 1px solid rgb(245, 175, 27);
+}
+
+.comment{
+ margin-left: 0px;
+ background-color: white;
+ padding: 4px 2px;
+ border-radius:4px !important;
+ margin-bottom: 8px;
+}
+
+.commentarea .thing, .res .commentarea .thing, html.res-commentBoxes.res-commentBoxes-rounded .comment {
+ position: relative;
+}
+
+.comment .midcol {
+ margin-left: 34px;
+ width: 15px;
+}
+
+.comment .expand {
+ background-color: transparent;
+ transition: all .1s ease;
+ color: #98abba;
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ bottom: 0px;
+ padding: 2px;
+ border-radius: 5px 0 0 5px;
+ z-index:1;
+}
+
+.comment .expand:hover {
+ text-decoration: none;
+ background: #F5AF1B;
+ color: #FFF;
+}
+
+.comment .child, .comment .showreplies {
+ margin-top: 10px;
+ margin-left: 15px;
+ border-left: 0px solid #cacaca;
+ border-radius: 7px;
+}
+
+.new-comment .usertext-body {
+ background-color: rgba(245, 175, 27, 0.22) !important;
+ border-radius: 2px !important;
+ border: 0;
+}
+
+html:lang(nm) .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-nightmode .comment .comment, 
+.res-nightmode .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
+{
+background-color:rgb(60,60,60) !important;
+}
+
+
+html:lang(nm) .comment, 
+html:lang(nm) .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+html:lang(nm) .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-nightmode .comment, 
+.res-nightmode .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, 
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
+{
+background-color:rgb(15,15,15) !important;
+}
+
+
+.comment .comment,
+.comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+background-color:rgb(235,235,235) !important;
+}
+
+
+.comment,
+.comment .comment .comment,
+.comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+background-color:rgb(255,255,255) !important;
+}
+
+.rank {
+margin-top:30px;
+margin-left:0px;
+margin-right:0px;
+color:#4A2583;
+font-family:arial;
+font-size:0 !important;
+text-align:right;
+}
+
+.res-nightmode .link .rank, html:lang(nm) .link .rank {
+color:#F5AF1B;
+}
+
+.midcol {
+float: left;
+margin: 10px 8px;
+overflow: hidden;
+border-radius: 5px;
+}
+
+.res-nightmode .midcol, html:lang(nm) .midcol {
+float:left;
+margin-right:0;
+margin-left:22px;
+overflow:hidden;
+border-radius:5px;
+padding:5px 8px 5px 5px;
+}
+
+.arrow:hover {
+ opacity: 0.5;
+}
+
+.arrow.up, .res-nightmode .arrow.up, html:lang(nm) .arrow.up, .arrow.up:hover, .res-nightmode .arrow.up:hover, html:lang(nm) .arrow.up:hover {
+background-image:url(%%sprite%%)!important;
+height:19px!important;
+width:16px!important;
+background-position:-1px -224px!important;
+margin-bottom:3px;
+}
+
+.arrow.down, .res-nightmode .arrow.down, html:lang(nm) .arrow.down .arrow.down:hover, .res-nightmode .arrow.down:hover, html:lang(nm) .arrow.down:hover {
+background-image:url(%%sprite%%)!important;
+height:19px!important;
+width:16px!important;
+background-position:-35px -224px!important;
+}
+
+.arrow.upmod, .res-nightmode .arrow.upmod, html:lang(nm) .arrow.upmod, .arrow.upmod:hover, .res-nightmode .arrow.upmod:hover, .html:lang(nm) .arrow.upmod:hover {
+background-image:url(%%sprite%%)!important;
+height:19px!important;
+width:16px!important;
+background-position:-18px -224px!important;
+margin-bottom:3px;
+}
+
+.arrow.downmod, .res-nightmode .arrow.downmod, html:lang(nm) .arrow.downmod, .arrow.downmod:hover, .res-nightmode .arrow.downmod:hover, html:lang(nm) .arrow.downmod:hover {
+background-image:url(%%sprite%%)!important;
+height:19px!important;
+width:16px!important;
+background-position:-52px -224px!important;
+}
+
+.link .score.dislikes, .res-nightmode .link .score.dislikes, html:lang(nm) .link .score.dislikes {
+color:#005d12;
+}
+
+.link .score.likes, .res-nightmode .link .score.likes, html:lang(nm) .link .score.likes {
+color:#C08F26;
+}
+
+.thing .title {
+ font-size: 14px!important;
+ font-weight: bolder;
+ margin-bottom: 1px;
+ margin-top: 13px;
+ text-overflow: ellipsis;
+}
+
+.thing .title:visited,.thing.visited .title {
+color:#616161 !important;
+}
+
+html:lang(nm) .thing .title:visited,.thing.visited .title {
+color:#989898 !important
+}
+
+.thing .thumbnail {
+position:relative;
+border-radius:2px;
+vertical-align:middle;
+border:2px #000;
+width:55px;
+height:55px;
+top:8px;
+margin: 4px 8px;
+}
+
+.thumbnail.self {
+background:url(%%sprite%%);
+background-position:-224px 0!important;
+background-color: #4A2583;
+}
+
+.thumbnail.self:after {
+opacity:0;
+}
+
+.thing .thumbnail img {
+margin-left:0!important;
+}
+
+.thing .thumbnail:after {
+position:absolute;
+bottom:4px;
+display:block;
+background:url(%%sprite%%);
+background-position:-168px 0!important;
+height:15px;
+width:55px;
+content:"";
+opacity:0;
+}
+
+.thing .thumbnail:before {
+position:absolute;
+display:block;
+background:url(%%sprite%%)!important;
+height:25px;
+width:25px;
+top:33px;
+left:15px;
+content:"";
+opacity:0;
+}
+
+.thing .thumbnail[href*="hawks"]:before {
+background-position:0 -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="celtics"]:before {
+background-position:-25px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="nets"]:before {
+background-position:-50px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="hornets"]:before {
+background-position:-75px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="bulls"]:before {
+background-position:-100px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="cleveland"]:before {
+background-position:-125px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="mavericks"]:before {
+background-position:-150px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="nuggets"]:before {
+background-position:-175px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="pistons"]:before {
+background-position:-200px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="warriors"]:before {
+background-position:-225px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="rockets"]:before {
+background-position:-250px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="pacers"]:before {
+background-position:-275px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="clippers"]:before {
+background-position:-300px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="grizzlies"]:before {
+background-position:-325px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="miami"]:before {
+background-position:-350px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="bucks"]:before {
+background-position:-375px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="minnesota"]:before {
+background-position:-400px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="new_orleans"]:before {
+background-position:-425px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="knicks"]:before {
+background-position:-450px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="thunder"]:before {
+background-position:-475px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="orlando"]:before {
+background-position:-500px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="76ers"]:before {
+background-position:-525px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="suns"]:before {
+background-position:-550px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="portland"]:before {
+background-position:-575px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="kings"]:before {
+background-position:-600px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="san_antonio"]:before {
+background-position:-625px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="raptors"]:before {
+background-position:-650px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="jazz"]:before {
+background-position:-675px -637px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="wizards"]:before {
+background-position:-700px -637px!important;
+opacity:1;
+}
+
+
+.thing .thumbnail[href$=".jpg"]:after {
+background-position:-168px -45px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="imgur.com"]:after {
+background-position:-168px -60px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="gfycat.com"]:after {
+background-position:-168px 0!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="vine.co"]:after {
+background-position:-168px -15px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="twitter.com"]:after {
+background-position:-168px -30px!important;
+opacity:1;
+}
+
+.thing .thumbnail[href*="youtube.com"]:after {
+background-position:-168px -75px!important;
+opacity:1;
+}
+
+.flair {
+float:left;
+background: url(%%sprite%%);
+border: 0;
+padding: 0;
+overflow: hidden;
+font-size:10px;
+font-weight: bolder;
+line-height: 49px;
+position: relative;
+}
+
+.flair.flair-yellow {
+width: 30px;
+height: 35px;
+text-align: center;
+background-position: 0px -602px;
+color: white;
+vertical-align: middle;
+text-shadow: -1px -1px 0 #4A2583, 1px -1px 0 #4A2583, -1px 1px 0 #4A2583, 1px 1px 0 #4A2583;
+}
+
+.flair.flair-purple {
+width: 30px;
+height: 35px;
+text-align: center;
+background-position: -30px -602px;
+font-weight: bolder;
+color: white;
+vertical-align: middle;
+overflow: hidden;
+text-shadow: -1px -1px 0 #F5AF1B, 1px -1px 0 #F5AF1B, -1px 1px 0 #F5AF1B, 1px 1px 0 #F5AF1B;
+}
+
+.flair.flair-black {
+position: relative;
+width: 30px;
+height: 35px;
+text-align: center;
+background-position: -60px -602px;
+font-weight: bolder;
+color: #4A2583;
+vertical-align: middle;
+text-shadow: -1px -1px 0 #F5AF1B, 1px -1px 0 #F5AF1B, -1px 1px 0 #F5AF1B, 1px 1px 0 #F5AF1B;
+}
+
+.flair.flair-white {
+position: relative;
+width: 30px;
+height: 35px;
+text-align: center;
+background-position: -90px -602px;
+color: #4A2583;
+vertical-align: middle;
+text-shadow: -1px -1px 0 #F5AF1B, 1px -1px 0 #F5AF1B, -1px 1px 0 #F5AF1B, 1px 1px 0 #F5AF1B;
+}
+
+.flair.flair-legendKobe {
+width: 49px;
+height: 49px;
+background-position: 0px -518px;
+margin-top: -3px;
+}
+
+.flair.flair-legendKAJ {
+width: 47px;
+height: 49px;
+background-position: -49px -518px;
+margin-top: -3px;
+}
+
+.flair.flair-legendMagic {
+width: 49px;
+height: 49px;
+background-position: -98px -518px;
+margin-top: -3px;
+}
+
+.flair.flair-legendShaq {
+width: 49px;
+height: 49px;
+background-position: -147px -518px;
+margin-top: -3px;
+}
+
+
+.flair.flair-legendChick {
+width: 49px;
+height: 49px;
+background-position: -196px -518px;
+margin-top: -3px;
+}
+
+.flair.flair-legendWest{
+width: 49px;
+height: 49px;
+background-position: -245px -518px;
+margin-top: -3px;
+}
+
+.flair.flair-ingram {
+width: 30px;
+height: 35px;
+background-position: 1px -567px;
+}
+
+.flair.flair-lonzo{
+width: 30px;
+height: 35px;
+background-position: -30px -567px;
+}
+
+.flair.flair-zubac{
+width: 30px;
+height: 35px;
+background-position: -60px -567px;
+}
+
+.flair.flair-kuzma{
+width: 30px;
+height: 35px;
+background-position: -90px -567px;
+}
+
+.flair.flair-kcp{
+width: 30px;
+height: 35px;
+background-position: -120px -567px;
+}
+
+.flair.flair-hart{
+width: 30px;
+height: 35px;
+background-position: -150px -567px;
+}
+
+.flair.flair-wagner{
+width: 30px;
+height: 35px;
+background-position: -180px -567px;
+}
+
+.flair.flair-svi{
+width: 30px;
+height: 35px;
+background-position: -210px -567px;
+}
+
+.flair.flair-lebron{
+width: 30px;
+height: 35px;
+background-position: -240px -567px;
+}
+
+
+.flair.flair-hawks{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: 0 -637px!important;
+}
+
+.flair.flair-celtics {
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -25px -637px!important;
+}
+
+.flair.flair-nets {
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -50px -637px!important;
+}
+
+.flair.flair-hornets {
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -75px -637px!important;
+}
+
+.flair.flair-bulls {
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -100px -637px!important;
+}
+
+.flair.flair-cavs {
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -125px -637px!important;
+}
+
+.flair.flair-mavs{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -150px -637px!important;
+}
+
+.flair.flair-nuggets{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -175px -637px!important;
+}
+
+.flair.flair-pistons {
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -200px -637px!important;
+}
+
+.flair.flair-warriors {
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -225px -637px!important;
+}
+
+.flair.flair-rockets {
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -250px -637px!important;
+}
+
+.flair.flair-pacers {
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -275px -637px!important;
+}
+
+.flair.flair-clippers {
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -300px -637px!important;
+}
+
+.flair.flair-grizzlies{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -325px -637px!important;
+}
+
+.flair.flair-heat{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -350px -637px!important;
+}
+
+.flair.flair-bucks{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -375px -637px!important;
+}
+
+.flair.flair-twolves{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -400px -637px!important;
+}
+
+.flair.flair-pelicans{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -425px -637px!important;
+}
+
+.flair.flair-knicks{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -450px -637px!important;
+}
+
+.flair.flair-thunder{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -475px -637px!important;
+}
+
+.flair.flair-magic{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -500px -637px!important;
+}
+
+.flair.flair-sixers{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -525px -637px!important;
+}
+
+.flair.flair-suns{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -550px -637px!important;
+}
+
+.flair.flair-blazers{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -575px -637px!important;
+}
+
+.flair.flair-kings{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -600px -637px!important;
+}
+
+.flair.flair-spurs{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -625px -637px!important;
+}
+
+.flair.flair-raptors{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -650px -637px!important;
+}
+
+.flair.flair-jazz{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -675px -637px!important;
+}
+
+.flair.flair-wizards{
+position: relative;
+width: 25px;
+height: 25px;
+background-position: -700px -637px!important;
+}
+
+.side .flair{
+float:none;
+}
+
+.linkflairlabel {
+font-size:xx-small;
+max-width: 120px;
+overflow: inherit;
+top: 2px;
+position:relative;
+padding:1px 2px;
+}
+
+.thing.linkflair-news > .thumbnail:after {
+background-position: -168px -105px!important;
+opacity: 1;
+}
+
+
+.thing.linkflair-gamethread > .thumbnail {
+background-position: -278px 0!important;
+opacity:1;
+}
+
+.linkflairlabel {
+background-color:transparent
+}
+
+.linkflair-gamethread .linkflairlabel {
+border: solid 1px;
+color:#4A2583;
+}
+
+html:lang(nm) .linkflair-gamethread .linkflairlabel {
+color:#9784B5;
+}
+
+.thing.linkflair-upvote > .thumbnail {
+background-position: -333px 0!important;}
+
+
+.linkflair-upvote .linkflairlabel {
+border: #BE8100 solid 1px;
+color:#BE8100;
+}
+
+.linkflair-news .linkflairlabel {
+border: solid 1px;
+color:#C75D5D;
+}
+
+.thing.linkflair-highlights > .thumbnail:after {
+height: 14px;
+width: 55px;
+background-position: -168px -120px!important;
+opacity: 1;
+background-color: #FFFFFF66;
+}
+
+.thing.linkflair-highlightsfull > .thumbnail:after {
+height: 55px;
+width: 55px;
+background-position: -388px 0px!important;
+opacity: 1;
+background-color: #FFFFFF66;
+}
+
+body.moderator .flairselector .linkflair-gamethread { 
+background-color:#4CDD74; 
+color:white; 
+top: 0;
+}
+
+body:not(.moderator) .flairselector .linkflair-gamethread { 
+display: none; 
+}
+
+.flairoptionpane {
+margin-bottom: 4px;
+overflow: auto;
+text-align: center;
+width: 234px;
+}
+
+.flairselector ul {
+display: inline-block;
+max-width: 234px;
+overflow: hidden;
+vertical-align: top;
+width: 234px !important;
+}
+
+.flairselector li {
+padding:0;
+}
+
+.flairselector h2 {
+background: #4F4F4F;
+padding-bottom: 0px;
+/* margin-bottom: 4px; */
+text-align: center;
+text-transform: uppercase;
+color: white;
+width: 234px;
+top: -4px;
+position: relative;
+margin-bottom: 0px;
+}
+
+
+.flairselector form {
+border-top: solid 2px black;
+clear: both;
+display: block;
+padding-top: 4px;
+text-align: center;
+width: 235px;
+}
+
+.flairselector .selected, .flairselector.active li {
+display: block;
+font-weight: normal;
+text-decoration: none!important;
+padding: 2px;
+}
+
+.thing.stickied a.title,.thing.stickied a.title:visited,.thing.stickied a.title.visited {
+font-weight:700;
+color:#C100C1;
+}
+
+.domain{
+color:#fff !important;
+}
+
+.domain a {
+color:#aaa !important;
+display:inline-block;
+overflow:hidden;
+white-space:nowrap;
+text-overflow:ellipsis;
+vertical-align:middle;
+max-width:19em;
+font-size:x-small;
+font-weight: initial;
+}
+
+.link .usertext .md {
+background:rgba(56,0,100,0);
+border-left:0 solid #F5AF1B;
+border-right:0 solid #F5AF1B;
+border-top:0 solid #F5AF1B;
+border-bottom:0 solid #F5AF1B;
+border-radius:0;
+opacity:1;
+color:#000;
+}
+
+html:lang(nm) .link .usertext .md {
+color:white !important;
+}
+
+.expando-button, .res-nightmode expando-button, html:lang(nm) expando-button {
+height:10px!important;
+width:10px!important;
+opacity:.5;
+transition:.2s;
+background:url(%%sprite%%) !important;
+background-position: 0 -72px !important;
+}
+
+.expando-button:hover, .res-nightmode expando-button:hover, html:lang(nm) expando-button:hover {
+opacity:1;
+}
+
+expando-button.expanded{
+opacity:1 !important; 
+}
+
+.tagline {
+color:#939393;
+font-size:12px;
+margin-top:3px;
+}
+
+.tagline .stickied-tagline {
+color:#aaa;
+font-weight:700;
+}
+
+.tagline a {
+color:#666!important;
+font-size:small;
+font-weight:700;
+}
+
+.entry {
+padding-left:16px;
+padding-right:0 !important;
+}
+
+.entry .buttons li a {
+color:#888!important;
+font-size:11px;
+font-style:normal;
+font-family:arial;
+padding:0 0;
+}
+
+.link .flat-list{
+margin-bottom:13px;
+}
+
+.unvotable-message {
+border:solid 1px #f60;
+margin-top:4px;
+margin-left:60px;
+border-radius:3px;
+display:none;
+color:#f60;
+padding:1px 3px;
+}
+
+.new-comment .usertext-body {
+background-color:#ccf;
+margin:5px;
+}
+
+.res-nightmode .new-comment .usertext-body, html:lang(nm) .new-comment .usertext-body {
+background-color:rgba(245,175,27,0.11);
+border:solid 0 #4A2583;
+padding-left:0;
+border-radius:0;
+margin:5px;
+}
+
+.comment .author {
+font-weight:700;
+font-style:italic;
+font-size:11px;
+font-family:sans-serif;
+}
+
+.titlebox .users-online,.titlebox .number,titlebox .subscribers {
+cursor:text;
+font-size:medium;
+text-align:center;
+}
+
+#search input[type=text] {
+border:0 solid gray!important;
+font-size:13px;
+font-family:verdana;
+width:100%;
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+vertical-align:middle;
+padding:6px 25px 6px 9px;
+}
+
+
+.content>h1 {
+ margin-top:5px;
+}
+
+ul.tabmenu.formtab{
+margin-top:10px;
+}
+
+.tabmenu.formtab a{
+border:0;
+color:#fff !important;
+background-color:#4A2583;
+}
+
+.tabmenu.formtab .selected a{
+ color: #4A2583 !important;
+ font-size: 100%;
+ background-color: #F5AF1B;
+ padding: 4px;
+ border:1px solid;
+}
+
+.formtabs-content{
+width:100%;
+border:0;
+}
+
+.infobar {
+ background-color: #F5AF1B;
+ color: #000;
+ border: 0;
+ border-radius: 5px;
+}
+
+.roundfield{
+width:98%;
+background-color: #c7c7c7;
+padding:5px;
+}
+
+.roundfield textarea, .roundfield input[type=text], .roundfield input[type=url], .roundfield input[type=password], .roundfield input[type=number], .roundfield .usertext-edit{
+width:98%;
+}
+
+.usertext-edit{
+    position: relative;
+    left: 55px;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+ -webkit-appearance: button;
+ cursor: pointer;
+ background-color: #F5AF1B;
+ border: 0;
+ padding: 7px;
+ border-radius: 3PX;
+margin: 3px;
+}
+
+.morelink .nub {
+position:absolute;
+top:0;
+right:0;
+height:0;
+width:0;
+background:#fff none no-repeat scroll center left;
+background-image:url(%%sprite%%);
+background-position:-30px -547px;
+background-repeat:no-repeat;
+}
+
+.gadget .midcol {
+width:24px;
+background:#fff;
+margin:0;
+}
+
+.side .titlebox .subscribers, .side .titlebox .users-online {
+font-size:110%;
+font-weight:700;
+color:#4A2583;
+line-height:20px;
+margin-left:0;
+}
+
+html:lang(nm) .side .titlebox .subscribers, html:lang(nm) .side .titlebox .users-online {
+color:white;
+}
+
+.side .titlebox .subscribers .number:before {
+content:"Lakers Nation is ";
+}
+
+.side .titlebox .subscribers .number:after {
+content:" Strong!";
+}
+
+.users-online:before {
+background:#4A2583;
+border-radius:10px;
+}
+
+.side .titlebox .users-online .number:after {
+content:" online";
+}
+
+.titlebox .bottom {
+border:0;
+}
+
+.titlebox form.toggle {
+background-color:transparent;
+}
+
+.titlebox .usertext .md {
+overflow:visible;
+margin:0;
+padding:0;
+}
+
+.titlebox {
+margin-left:8px;
+margin-right:8px;
+}
+
+.titlebox .usertext .md h2 {
+color:#333;
+}
+
+.titlebox .usertext .md>h2 {
+border:0;
+color:#FFF;
+background-color:#4A2583;
+position:relative;
+left:-9px;
+right:17px;
+width:297px;
+padding:5px 0 5px 5px;
+}
+
+.usertext button {
+ margin: 5px 5px 10px 0;
+ background-color: rgb(245, 175, 27);
+ border: 0;
+ padding: 8px;
+ border-radius: 3px;
+ color: black;
+ text-transform: uppercase;
+ font-weight: bold;
+ font-size: smaller;
+}
+
+.sidecontentbox {
+border:0 solid gray;
+font-size:larger;
+list-style:none;
+margin:0;
+padding:5px;
+}
+
+.sidecontentbox .helplink+.title h1 {
+font-size:0!important;
+}
+
+.sidecontentbox .helplink+.title h1:before {
+font-size:14px!important;
+content:"FRONT OFFICE";
+}
+
+.side h1.redditname,.side h1.redditname+div,.side .subButtons {
+text-align:center;
+padding-bottom:8px;
+}
+
+.fancy-toggle-button .active {
+background:#F5AF1B!important;
+font-size:11px!important;
+color:#000!important;
+border:0 solid #444!important;
+border-radius:3px 3px 3px 3px!important;
+padding:7px 6px!important;
+}
+
+#progressIndicator,#NERFail,.NERPageMarker {
+width:inherit!important;
+background-color:#4A2583!important;
+border:0 solid #000!important;
+border-top:0 solid!important;
+border-bottom:3px solid #d8d8d8!important;
+border-radius:2px!important;
+}
+
+#userbarToggle {
+top: 7px!important;
+width: 16px!important;
+height: 16px!important;
+background: url(%%sprite%%)!important;
+background-position: -133px -210px!important;
+border: 0!important;
+text-align: left!important;
+text-indent: -9999px!important;
+min-height: 16px !important;
+}
+
+.res-nightmode #userbarToggle, html:lang(nm) #userbarToggle {
+background-color:#4A2583!important;
+background-position:-149px -210px!important;
+}
+
+.res-navTop #userbarToggle.userbarShow{
+background-position: -133px -226px!important;
+}
+
+.res-nightmode .res-navTop #userbarToggle.userbarShow, html:lang(nm) .res-navTop #userbarToggle.userbarShow{
+background-position: -149px -226px!important;
+}
+
+#RESAccountSwitcherIcon {
+height:16px!important;
+width:16px!important;
+background-image:url(%%sprite%%)!important;
+background-position:-100px -210px!important;
+}
+
+.res-nightmode #RESAccountSwitcherIcon, html:lang(nm) #RESAccountSwitcherIcon {
+background-position:-100px -226px!important;
+}
+
+.gearIcon {
+display:inline-block;
+width:16px!important;
+height:16px!important;
+background-image:url(%%sprite%%);
+background-repeat:no-repeat;
+background-position:-116px -210px!important;
+}
+
+.res-nightmode .gearIcon, html:lang(nm) .gearIcon {
+background-position:-116px -226px!important;
+}
+
+#RESMainGearOverlay {
+background-color:#F5AF1B!important;
+}
+
+.res-nightmode #srList, html:lang(nm) #srList{
+background-color:#200039 !important;
+}
+
+#srList td {
+padding: 3px 8px;
+color:grey;
+}
+
+.RESDropdownList {
+list-style-type:none;
+background-color:#F5AF1B!important;
+color:#000!important;
+width:180px;
+border:2px solid #4A2583!important;
+border-image-source:initial;
+border-image-slice:initial;
+border-image-width:initial;
+border-image-outset:initial;
+border-image-repeat:initial;
+margin-top:-1px;
+}
+
+.res-nightmode .RESDropdownList, html:lang(nm) .RESDropdownList {
+list-style-type:none;
+background-color:#4A2583!important;
+color:#fff!important;
+width:180px;
+border:2px #F5AF1B!important;
+border-image-source:initial;
+border-image-slice:initial;
+border-image-width:initial;
+border-image-outset:initial;
+border-image-repeat:initial;
+margin-top:-1px;
+border-radius:5px;
+}
+
+.RESDropdownList a:hover {
+background:transparent!important;
+color:#fff!important;
+}
+
+.res-nightmode .RESDropdownList a:hover, html:lang(nm) .RESDropdownList a:hover {
+background:transparent!important;
+color:#000!important;
+}
+
+.RESDropdownList li:hover {
+background-color:#4A2583!important;
+color:#fff!important;
+}
+
+.res-nightmode .RESDropdownList li a, html:lang(nm) .RESDropdownList li a {
+background-color:transparent !important;
+color:#fff!important;
+}
+
+.res .RES-keyNav-activeElement,.res .commentarea .RES-keyNav-activeElement .md,.res .commentarea .RES-keyNav-activeElement.entry .noncollapsed {
+background-color:transparent !important;
+margin-left:0!important;
+transition:.2s;
+}
+
+#RESShortcuts{
+color: wheat;
+}
+
+#RESShortcutsEditContainer {
+width:69px;
+position:absolute;
+right:0;
+top:0;
+background-color:transparent;
+height:16px;
+}
+
+#RESShortcutsEditContainer {
+max-height: 15px !important;
+}
+
+#RESShortcutsEditContainer div {
+width:30px;
+height:15px;
+line-height:24px!important;
+text-indent:-9999px;
+}
+
+#RESShortcutsSort,#RESShortcutsLeft,#RESShortcutsAdd,#RESShortcutsTrash,#RESShortcutsRight {
+background:#4A2583 url(%%sprite%%) no-repeat!important;
+}
+
+#RESShortcutsSort {
+right:81px!important;
+background-position:-133px -182px!important;
+}
+
+#RESShortcutsLeft {
+right:54px!important;
+background-position:-163px -182px!important;
+}
+
+#RESShortcutsAdd {
+right:27px!important;
+background-position:-193px -182px!important;
+}
+
+#RESShortcutsRight {
+background-position:-223px -182px!important;
+}
+
+.drop-choices {
+position:absolute;
+left:0;
+border:2px solid #4A2583;
+background-color:#4A2583;
+white-space:nowrap;
+line-height:normal;
+margin-top:1px;
+font-size:small;
+}
+
+.drop-choices a.choice {
+ cursor: pointer;
+ padding: 2px 3px 1px 3px;
+ display: block;
+ color: white !important;
+ font-size: smaller;
+}
+
+#RESShortcutsAddFormContainer {
+display:none;
+position:absolute;
+width:290px;
+right:0;
+top:21px;
+background-color:#F5AF1B!important;
+border:2px solid #4A2583!important;
+border-radius:3px;
+font-size:12px;
+color:#000;
+padding:2px;
+}
+
+#RESShortcutsAddFormContainer a {
+font-weight:700;
+color:#fff;
+}
+
+#addSubreddit {
+float:right;
+cursor:pointer;
+font-size:12px;
+color:#fff;
+border:0 solid #636363;
+border-radius:3px;
+background-color:#4A2583;
+padding:3px 5px;
+}
+
+.res-nightmode .RESDialogSmall, .RESDialogSmall, html:lang(nm) .RESDialogSmall {
+color:#000;
+background-color:#ffcc6c;
+border-bottom:1px solid #ffcc6c;
+}
+
+
+
+.RESDialogSmall a {
+color:#000;
+}
+
+.RESDialogSmall > h3 {
+background-color:#F5AF1B;
+}
+
+.RESDialogSmall .RESDialogContents {
+background-color:#ffcc6c;
+}
+
+.blueButton {
+font-size:12px;
+color:#fff!important;
+border:0 solid #636363;
+border-radius:3px;
+background-color:#4A2583;
+}
+
+.flairselector.drop-choices.active {
+border: 0px solid gray;
+display: block;
+width: 230px!important;
+background: white;
+box-shadow: 8px 8px rgba(0,0,0,0.5) !important;
+}
+
+.flairsample-left{
+text-align:left !important;
+}
+
+.titlebox .users-online, .titlebox .number, titlebox .subscribers{
+text-align:left;
+}
+
+.res-nightmode a, html:lang(nm) a {
+color:#9c6c00!important;
+}
+
+.res-nightmode .md, html:lang(nm) .md{
+color:#c5c5c5;
+}
+
+.side .usertext-body .md h4+h3+ul li a:hover:after,100% {
+opacity:1;
+}
+
+.side .titlebox .redditname, .side .titlebox .word,h5+h2,h5+h2+h3 {
+display:none;
+}
+
+#header-bottom-left .tabmenu li a:hover {
+opacity:1;
+transition:.2s;
+}
+
+.expando-button.video.collapsed, .res-nightmode .expando-button.video.collapsed, html:lang(nm) .expando-button.video.collapsed, .expando-button.video-muted.collapsed, .res-nightmode .expando-button.video-muted.collapsed, html:lang(nm) .expando-button.video-muted.collapsed {
+background-image:url(%%sprite%%)!important;
+background-position:0px -72px!important;
+}
+
+.expando-button.video.expanded,res-nightmode .expando-button.video.expanded,.expando-button.video-muted.expanded,res-nightmode .expando-button.video-muted.expanded {
+background-image:url(%%sprite%%)!important;
+background-position:-0px -72px!important;
+opacity:1;
+}
+
+.thing .tagline .author.moderator,.res .thing .tagline .author.moderator,.thing .tagline .author.moderator:hover,.res .thing .tagline .author.moderator:hover {
+background-color:#4A2583!important;
+border-radius:10px!important;
+color:#fff!important;
+padding:2px 5px!important;
+}
+
+.sidebox.submit.submit-text a:hover:after,.sidebox.submit.submit-link a:hover:after {
+transition:.2s;
+opacity:1;
+}
+
+.morelink,.morelink:hover {
+border:0;
+background:transparent;
+background-image:url(%%sprite%%);
+background-position:0 -278px;
+background-repeat:repeat;
+}
+
+.RESDropdownList a,.RESDropdownList li {
+color:#000!important;
+}
+
+.res-nightmode .RESDropdownList a, html:lang(nm) .RESDropdownList a, .res-nightmode .RESDropdownList li, html:lang(nm) .RESDropdownList li {
+color:#fff!important;
+}
+
+.res-nightmode .RESDropdownList li:hover, html:lang(nm) .RESDropdownList li:hover,.RESDropdownList li a {
+background-color:#F5AF1B!important;
+color:#000!important;
+}
+
+.RESshortcutside,.RESDashboardToggle {
+background:#4A2583!important;
+font-size:11px!important;
+border:0 solid #444!important;
+border-radius:3px 3px 3px 3px!important;
+padding:7px 6px!important;
+}
+
+.newComments {
+display: inline;
+color: rgb(161, 68, 176);
+font-size: 10px;
+}
+
+.footer-parent {
+ font-size: larger;
+ padding: 11px;
+ clear: both;
+ text-align: center;
+ border-radius: 18px;
+}
+
+.footer {
+ color: gray;
+ padding: 0;
+ margin: 0 0 15px 0;
+ border: 0;
+ display: flex;
+ display: -webkit-flex;
+ max-width: 100% !important;
+ border-radius: 3px !important;
+ background-color: transparent;
+}
+
+/* -- Current Record -- */
+.side h6+h1 {
+ position: absolute;
+ top: 195px;
+ right: 28px;
+ background: transparent!important;
+ color: #000!important;
+ font-size: 152%!important;
+ font-weight: 700!important;
+ border: 0!important;
+ margin: 0!important;
+ z-index: 2;
+ text-align: right;
+}
+
+html:lang(nm) .link.promotedlink.promoted {
+ background-color: #3D3D3D;
+}
+
+/* -- Schedule --*/
+.side h6+h2 {
+position:absolute;
+display:none;
+top:191px;
+left:45px;
+font-size:150%;
+font-family:sans-serif;
+}
+
+h6+h2+ul>li>em {
+ font-style: normal!important;
+ position: absolute;
+ left: 36px;
+ font-size: 10px;
+ top: 2px;
+ color: black!important;
+}
+
+h6+h2+ul>li>strong {
+ font-style: normal!important;
+ position: absolute;
+ left: 35px;
+ font-size: 10px;
+ width:55px;
+ top: 15px;
+ color: black!important;
+}
+
+.side h6+h2+ul {
+ position: absolute;
+ background: rgba(245, 245, 245, 1)!important;
+ top: 190px;
+ left: 20px;
+ right: 20px;
+ list-style: none;
+ height: 40px;
+ border-radius: 0;
+ overflow: hidden;
+ border: 0 solid #FFAF00;
+ padding-left: 4px;
+ margin: 0!important;
+}
+
+html:lang(nm) .side h6+h2+ul{
+background: rgba(142, 142, 142, 1)!important;
+}
+
+.side h6+h2+ul>li {
+ position: relative;
+ height: 26px;
+ width: 85px;
+ float: left;
+ top: 2px;
+ margin: 0 5px 0 0;
+ background: rgb(230, 230, 230);
+ display: block;
+ list-style: none;
+ padding: 3px 0px;
+ border-radius: 2px;
+ box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.06);
+ border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.side h6+h2+ul>li>a:nth-of-type(1):after {
+height:25px!important;
+width:25px!important;
+top:4px;
+left:4px;
+content:""!important;
+background:url(%%sprite%%)!important;
+position:absolute!important;
+display:inline-block!important;
+opacity:1;
+background-position:-725px -637px !important;
+}
+
+.side h6+h2+ul>li>a[href$="/r/atlantahawks"]:after {
+background-position:0 -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/bostonceltics"]:after {
+background-position:-25px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/gonets"]:after {
+background-position:-50px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/charlottehornets"]:after {
+background-position:-75px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/chicagobulls"]:after {
+background-position:-100px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/clevelandcavs"]:after {
+background-position:-125px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/mavericks"]:after {
+background-position:-150px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/denvernuggets"]:after {
+background-position:-175px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/detroitpistons"]:after {
+background-position:-200px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/warriors"]:after {
+background-position:-225px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/rockets"]:after {
+background-position:-250px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/pacers"]:after {
+background-position:-275px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/laclippers"]:after {
+background-position:-300px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/memphisgrizzlies"]:after {
+background-position:-325px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/heat"]:after {
+background-position:-350px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/mkebucks"]:after {
+background-position:-375px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/timberwolves"]:after {
+background-position:-400px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/nolapelicans"]:after {
+background-position:-425px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/nyknicks"]:after {
+background-position:-450px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/thunder"]:after {
+background-position:-475px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/orlandomagic"]:after {
+background-position:-500px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/sixers"]:after {
+background-position:-525px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/suns"]:after {
+background-position:-550px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/ripcity"]:after {
+background-position:-575px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/kings"]:after {
+background-position:-600px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/nbaspurs"]:after {
+background-position:-625px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/torontoraptors"]:after {
+background-position:-650px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/utahjazz"]:after {
+background-position:-675px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="/r/washingtonwizards"]:after {
+background-position:-700px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a[href$="#draft"]:after {
+background-position:-750px -637px !important;
+opacity:1;
+}
+
+.side h6+h2+ul>li>a:nth-of-type(2) {
+height:25px!important;
+width:25px!important;
+top:-6px;
+left:64px;
+content:""!important;
+background:url(%%sprite%%)!important;
+position:absolute!important;
+display:inline-block!important;
+opacity:.75;
+background-position:-725px -637px !important;
+text-indent:-9999px;
+cursor: default;
+}
+
+.side h6+h2+ul>li>a[href$="#home"] {
+background-position:-800px -637px !important;
+}
+
+.side h6+h2+ul>li>a[href$="#away"] {
+background-position:-825px -637px !important;
+}
+
+.side h6+h2+ul>li>a[href$="#W"] {
+background-position:-850px -637px !important;
+}
+
+.side h6+h2+ul>li>a[href$="#L"] {
+background-position:-875px -637px !important;
+}
+/* -- Search -- */
+#search {
+ white-space: nowrap;
+ position: relative;
+ margin: 0 6px;
+}
+
+#search input[type=text] {
+ border: 1px solid rgba(94, 0, 167, 0)!important;
+ font-size: 13px;
+ font-family: verdana;
+ width: 100%;
+ box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ vertical-align: middle;
+ padding: 6px 25px 6px 9px;
+ background-color: rgba(245, 175, 27, 0.54);
+ border-radius: 16px;
+}
+
+
+/* -- Official Links -- */
+.side h6+h3 {
+width: 294px!important;
+background-color: #F5AF1B!important;
+color: #000!important;
+position: relative!important;
+display: block!important;
+font-weight: 600 !important;
+padding: 8px 4px !important;
+font-size: 18px !important;
+left:-9px;
+}
+
+html:lang(nm) .side h6+h3{
+background-color: #4A2583!important;
+color:#fff !important;
+}
+
+.side h6+h3+ul {
+width: 290px;
+height: 32px;
+padding:0 !important;
+left: 6px;
+position: relative;
+}
+
+.side h6+h3+ul>li {
+float:left;
+height:32px;
+width:32px;
+margin-right:16px !important;
+list-style: none;
+}
+
+.side h6+h3+ul li a, .side h6+h3+ul li a:hover {
+float:left;
+background:url(%%sprite%%);
+height:32px;
+width:32px;
+text-indent:-9999px;
+}
+
+.side h6+h3+ul>li>a[href$="www.nba.com"]{
+background-position: -472px -293px;
+}
+
+.side h6+h3+ul>li>a[href$="www.nba.com"]:hover{
+background-position: -504px -293px;
+}
+
+.side h6+h3+ul>li>a[href$="nba.com/lakers"] {
+background-position: -472px -325px;
+}
+
+.side h6+h3+ul>li>a[href$="nba.com/lakers"]:hover {
+background-position: -504px -325px;
+}
+
+.side h6+h3+ul>li>a[href="http://twitter.com/lakers"] {
+background-position: -472px -357px;
+}
+
+.side h6+h3+ul>li>a[href="http://twitter.com/lakers"]:hover {
+background-position: -504px -357px;
+}
+
+.side h6+h3+ul>li>a[href="https://www.facebook.com/losangeleslakers"] {
+background-position: -472px -485px;
+}
+
+.side h6+h3+ul>li>a[href="https://www.facebook.com/losangeleslakers"]:hover {
+background-position: -504px -485px;
+}
+
+.side h6+h3+ul>li>a[href="http://instagram.com/lakers/"] {
+background-position: -472px -389px;
+}
+
+.side h6+h3+ul>li>a[href="http://instagram.com/lakers/"]:hover {
+background-position: -504px -389px;
+}
+
+.side h6+h3+ul>li>a[href="http://lakers.tumblr.com/"] {
+background-position: -472px -421px;
+}
+
+.side h6+h3+ul>li>a[href="http://lakers.tumblr.com/"]:hover {
+background-position: -504px -421px;
+}
+
+.side h6+h3+ul>li>a[href="http://www.nba.com/lakers/schedule?cid=TW"] {
+background-position: -472px -453px;
+}
+
+.side h6+h3+ul>li>a[href="http://www.nba.com/lakers/schedule?cid=TW"]:hover {
+background-position: -504px -453px;
+}
+
+
+/* -- News-- */
+.side h6+h4 {
+width: 294px!important;
+background-color: #F5AF1B!important;
+color: #000!important;
+position: relative!important;
+display: block!important;
+font-weight: 600 !important;
+padding: 8px 4px !important;
+font-size: 18px !important;
+left:-9px;
+}
+
+html:lang(nm) .side h6+h4{
+background-color: #4A2583!important;
+color:#fff !important;
+}
+
+.side h6+h4+ul {
+padding: 0 !important;
+margin: 0 !important;
+left: -8px;
+position: relative;
+height: 32px;
+width:300px;
+}
+
+.side h6+h4+ul>li {
+float: left;
+height: 32px;
+width: 32px;
+padding: 0;
+margin: 0px 0 0 1px !important;
+position: relative;
+list-style:none;
+}
+
+.side h6+h4+ul>li>a, .side h6+h4+ul>li>a:hover {
+background:url(%%sprite%%);
+display: block;
+position: relative;
+width: 32px;
+height: 32px;
+text-indent:-9999px;
+}
+
+.side h6+h4+ul>li>a[href^="http://sports.yahoo.com"]{
+background-position:-472px 1px;
+}
+
+.side h6+h4+ul>li>a[href^="http://sports.yahoo.com"]:hover{
+background-position:-504px 1px;
+}
+
+.side h6+h4+ul>li>a[href^="http://espn.go.com"]{
+background-position:-472px -31px;
+}
+
+.side h6+h4+ul>li>a[href^="http://espn.go.com"]:hover{
+background-position:-504px -31px;
+}
+
+.side h6+h4+ul>li>a[href^="http://losangeles.cbslocal.com"]{
+background-position:-472px -63px;
+}
+
+.side h6+h4+ul>li>a[href^="http://losangeles.cbslocal.com"]:hover{
+background-position:-504px -63px;
+}
+
+.side h6+h4+ul>li>a[href^="http://www.latimes.com"]{
+background-position:-472px -95px;
+}
+
+.side h6+h4+ul>li>a[href^="http://www.latimes.com"]:hover{
+background-position:-504px -95px;
+}
+
+.side h6+h4+ul>li>a[href^="http://www.si.com/nba/team/los-angeles-lakers"]{
+background-position:-472px -127px;
+}
+
+.side h6+h4+ul>li>a[href^="http://www.si.com/nba/team/los-angeles-lakers"]:hover{
+background-position:-504px -127px;
+}
+
+.side h6+h4+ul>li>a[href^="http://msn.foxsports.com"]{
+background-position:-472px -159px;
+}
+
+.side h6+h4+ul>li>a[href^="http://msn.foxsports.com"]:hover{
+background-position:-504px -159px;
+}
+
+.side h6+h4+ul>li>a[href^="http://www.twcsportsnet.com"]{
+background-position:-472px -191px;
+}
+
+.side h6+h4+ul>li>a[href^="http://www.twcsportsnet.com"]:hover{
+background-position:-504px -191px;
+}
+
+.side h6+h4+ul>li>a[href^="http://www.lakersmedia.com"]{
+background-position:-472px -223px;
+}
+
+.side h6+h4+ul>li>a[href^="http://www.lakersmedia.com"]:hover{
+background-position:-504px -223px;
+}
+
+.side h6+h4+ul>li>a[href^="https://www.youtube.com/"]{
+background-position:-472px -255px;
+}
+
+.side h6+h4+ul>li>a[href^="https://www.youtube.com/"]:hover{
+background-position:-504px -255px;
+}
+
+/* Monthly Schedule */
+.side h6+h5{
+width: 294px!important;
+background-color: #F5AF1B!important;
+color: #000!important;
+position: relative!important;
+display: block!important;
+font-weight: 600 !important;
+padding: 8px 4px !important;
+font-size: 18px !important;
+left:-9px;
+text-decoration: none;
+}
+
+html:lang(nm) .side h6+h5{
+background-color: #4A2583!important;
+color:#fff !important;
+}
+
+.side h6+h5+table>tbody>tr>td {
+height:40px;
+width:40px;
+text-align: center;
+}
+
+.side h6+h5+table>tbody>tr>td>a:after {
+height:25px!important;
+width:25px!important;
+background:url(%%sprite%%)!important;
+content:""!important;
+display:block;
+background-position:-725px -637px !important;
+position: relative;
+left: 5px;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/atlantahawks"]:after {
+background-position:0 -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/bostonceltics"]:after {
+background-position:-25px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/gonets"]:after {
+background-position:-50px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/charlottehornets"]:after {
+background-position:-75px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/chicagobulls"]:after {
+background-position:-100px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/clevelandcavs"]:after {
+background-position:-125px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/mavericks"]:after {
+background-position:-150px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/denvernuggets"]:after {
+background-position:-175px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/detroitpistons"]:after {
+background-position:-200px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/warriors"]:after {
+background-position:-225px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/rockets"]:after {
+background-position:-250px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/pacers"]:after {
+background-position:-275px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/laclippers"]:after {
+background-position:-300px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/memphisgrizzlies"]:after {
+background-position:-325px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/heat"]:after {
+background-position:-350px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/mkebucks"]:after {
+background-position:-375px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/timberwolves"]:after {
+background-position:-400px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/nolapelicans"]:after {
+background-position:-425px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/nyknicks"]:after {
+background-position:-450px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/thunder"]:after {
+background-position:-475px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/orlandomagic"]:after {
+background-position:-500px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/sixers"]:after {
+background-position:-525px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/suns"]:after {
+background-position:-550px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/ripcity"]:after {
+background-position:-575px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/kings"]:after {
+background-position:-600px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/nbaspurs"]:after {
+background-position:-625px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/torontoraptors"]:after {
+background-position:-650px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/utahjazz"]:after {
+background-position:-675px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="/r/washingtonwizards"]:after {
+background-position:-700px -637px !important;
+}
+
+.side h6+h5+table>tbody>tr>td>a[href$="#draft"]:after {
+background-position:-750px -637px !important;
+}
+
+/* Social Media*/
+.side h6+h6{
+width: 294px!important;
+background-color: #F5AF1B!important;
+color: #000!important;
+position: relative!important;
+display: block!important;
+font-weight: 600 !important;
+padding: 8px 4px !important;
+font-size: 18px !important;
+left:-9px;
+text-decoration: none;
+}
+
+html:lang(nm) .side h6+h6{
+background-color: #4A2583!important;
+color:#fff !important;
+}
+
+.side h6+h6+table {
+ width: 100%;
+}
+
+.side h6+h6+table th {
+background: transparent;
+padding: 0;
+border: 0;
+}
+
+.side h6+h6+table td {
+border: 0;
+padding: 1px 4px;
+}
+
+
+.side h6+h6+table tr:hover {
+ background: rgba(245, 175, 27, 0.48)!important;
+}
+
+.side h6+h6+table a[href*="twitter.com"]:before{
+background:url(%%sprite%%);
+content: "";
+width: 25px;
+height: 25px;
+display: inline-block;
+background-position: 0 0;
+vertical-align: middle;
+margin-right: 3px;
+}
+
+.side h6+h6+table a[href*="twitter.com"]:hover:before{
+background:url(%%sprite%%);
+content: "";
+width: 25px;
+height: 25px;
+display: inline-block;
+background-position: 0 -25px;
+vertical-align: middle;
+margin-right: 3px;
+}
+
+.side h6+h6+table a[href*="instagram.com"]:before{
+background:url(%%sprite%%);
+content: "";
+width: 25px;
+height: 25px;
+display: inline-block;
+background-position: -50px 0;
+vertical-align: middle;
+margin-right: 3px;
+}
+
+.side h6+h6+table a[href*="instagram.com"]:hover:before{
+background:url(%%sprite%%);
+content: "";
+width: 25px;
+height: 25px;
+display: inline-block;
+background-position: -50px -25px;
+vertical-align: middle;
+margin-right: 3px;
+}
+
+.side h6+h6+table a[href*="snapchat.com"]:before{
+background:url(%%sprite%%);
+content: "";
+width: 25px;
+height: 25px;
+display: inline-block;
+background-position: -25px 0;
+vertical-align: middle;
+margin-right: 3px;
+}
+
+.side h6+h6+table a[href*="snapchat.com"]:hover:before{
+background:url(%%sprite%%);
+content: "";
+width: 25px;
+height: 25px;
+display: inline-block;
+background-position: -25px -25px;
+vertical-align: middle;
+margin-right: 3px;
+}
+
+/* --Related Sub-- */
+.side h5+h1{
+width: 294px!important;
+background-color: #F5AF1B!important;
+color: #000!important;
+position: relative!important;
+display: block!important;
+font-weight: 600 !important;
+padding: 8px 4px !important;
+font-size: 18px !important;
+left:-9px;
+text-decoration: none;
+}
+
+html:lang(nm) .side h5+h1{
+background-color: #4A2583!important;
+color:#fff !important;
+}
+
+.side h5+h1+ul {
+float: left;
+width: 288px;
+padding: 0;
+margin: 0 !important;
+left: -4px;
+position: relative;
+}
+
+.side h5+h1+ul>li {
+float: left;
+width: 64px;
+padding: 0;
+margin: 0 0 8px 8px !important;
+position: relative;
+list-style:none;
+}
+
+.side h5+h1+ul>li>a, .side h5+h1+ul>li>a:hover {
+background:url(%%sprite%%);
+display: block;
+position: relative;
+width: 64px;
+height: 64px;
+text-indent:-9999px;
+}
+
+.side a[href="/r/nba"] {
+background-position:-536px 0;
+}
+
+.side a[href="/r/nba"]:hover {
+background-position:-600px 0;
+}
+
+.side a[href="/r/wnba"] {
+background-position:-536px -64px;
+}
+
+.side a[href="/r/wnba"]:hover {
+background-position:-600px -64px;
+}
+
+.side a[href="/r/sports"] {
+background-position:-536px -128px;
+}
+
+.side a[href="/r/sports"]:hover {
+background-position:-600px -128px;
+}
+
+.side a[href="/r/dodgers"] {
+background-position:-536px -192px;
+}
+
+.side a[href="/r/dodgers"]:hover {
+background-position:-600px -192px;
+}
+
+.side a[href="/r/lagalaxy"] {
+background-position:-536px -254px;
+}
+
+.side a[href="/r/lagalaxy"]:hover {
+background-position:-600px -254px;
+}
+
+.side a[href="/r/basketball"] {
+background-position:-536px -319px;
+}
+
+.side a[href="/r/basketball"]:hover {
+background-position:-600px -319px;
+}
+
+.side a[href="/r/LosAngeles"] {
+background-position:-536px -384px;
+}
+
+.side a[href="/r/LosAngeles"]:hover {
+background-position:-600px -384px;
+}
+
+.side a[href="/r/losangelesrams"] {
+background-position:-536px -448px;
+}
+
+.side a[href="/r/losangelesrams"]:hover {
+background-position:-600px -448px;
+}
+
+.side a[href="/r/losangeleskings"] {
+background-position:-536px -510px;
+}
+
+.side a[href="/r/losangeleskings"]:hover {
+background-position:-600px -510px;
+}
+
+
+/* Active Players */
+.side .usertext-body .md h5+h2+ul {
+top:18px;
+left:16px;
+width:425px!important;
+display:block;
+position:absolute;
+font-size:0;
+list-style:none outside none;
+background-color:transparent!important;
+margin:0;
+padding:0;
+}
+
+html:lang(nm) .side .usertext-body .md h5+h2+ul{
+opacity:0.8;
+}
+
+.side .usertext-body .md h5+h2+ul li a {
+width:68px;
+height:135px;
+background:url(%%players%%);
+float:left;
+margin-left:0px;
+position:relative;
+border-right: 1px solid white;
+}
+
+.side .usertext-body .md h5+h2+ul li a:after {
+position: absolute;
+display: block;
+background: url(%%players%%);
+height: 135px;
+width: 68px;
+opacity: 0;
+content: "";
+transition:0.5s;
+}
+
+.side .usertext-body .md h5+h2+ul li a:hover:after {
+opacity:1 !important;
+}
+
+.side .usertext-body .md h5+h2+ul li:nth-child(1) a {
+background-position: 0 -135px;
+}
+
+.side .usertext-body .md h5+h2+ul li:nth-child(1) a:after {
+background-position: 0 0px;
+}
+
+
+.side .usertext-body .md h5+h2+ul li:nth-child(2) a {
+background-position:-70px -135px;
+}
+
+.side .usertext-body .md h5+h2+ul li:nth-child(2) a:after {
+background-position: -70px 0px;
+}
+
+.side .usertext-body .md h5+h2+ul li:nth-child(3) a {
+background-position:-140px -135px;
+}
+
+.side .usertext-body .md h5+h2+ul li:nth-child(3) a:after {
+background-position: -140px 0px;
+}
+
+.side .usertext-body .md h5+h2+ul li:nth-child(4) a {
+background-position:-210px -135px;
+}
+
+.side .usertext-body .md h5+h2+ul li:nth-child(4) a:after {
+background-position: -210px 0px;
+}
+
+.side .usertext-body .md h5+h2+ul li:nth-child(5) a {
+background-position:-280px -135px;
+}
+
+.side .usertext-body .md h5+h2+ul li:nth-child(5) a:after {
+background-position: -280px 0px;
+}
+
+.side .usertext-body .md h5+h2+ul li:nth-child(6) a {
+background-position:-350px -135px;
+}
+
+.side .usertext-body .md h5+h2+ul li:nth-child(6) a:after {
+background-position: -350px 0px;
+}
+
+
+/* Championships */
+.side .usertext-body .md h5+h3 {
+ display:none;
+}
+
+.side .usertext-body .md h5+h3+ul {
+top: 128px;
+left: 50%;
+height: 20px!important;
+width: 88px!important;
+display: block;
+position: absolute;
+margin: 0px;
+margin-left:-42px;
+font-size: 8px;
+list-style: none outside none;
+background-color: transparent!important;
+background: url(%%sprite%%);
+background-position: -372px -251px;
+padding:0 6px;
+transition: 0.5s;
+overflow: hidden;
+z-index:1;
+}
+
+.side .usertext-body .md h5+h3+ul:hover {
+height: 155px!important;
+}
+
+.side .usertext-body .md h5+h3+ul>li>a {
+float: left;
+transition: 0.3s;
+position: relative;
+top: 84px;
+left: 0px;
+margin-right: 0px;
+width:22px;
+color: #fff !important;
+}
+
+.side .usertext-body .md h5+h3+ul>li:nth-child(even)>a {
+color: #fff !important;
+}
+
+.side .usertext-body .md h5+h3+ul>li:nth-child(odd)>a {
+color: #ddd !important;
+}
+
+.side .usertext-body .md h5+h3+ul>li>a:hover {
+color:#F5AF1B !important;
+}
+
+
+/* Retired */
+.side .usertext-body .md h5+h4+ul {
+top: 18px;
+right:16px;
+height: 135px!important;
+width: 384px!important;
+display: block;
+position: absolute;
+margin: 0;
+font-size: 0;
+list-style: none outside none;
+padding:0;
+}
+
+html:lang(nm) .side .usertext-body .md h5+h4+ul {
+opacity:0.8;
+}
+
+.side .usertext-body .md h5+h4+ul a {
+height: 135px;
+width: 30px;
+background: url(%%legends2%%);
+float: right;
+margin-right:0;
+position:relative;
+border-left:2px solid white;
+}
+
+
+.side .usertext-body .md h5+h4+ul li a:after {
+ position: absolute;
+ display: block;
+ background: url(%%legends2%%);
+ height: 135px;
+ width: 30px;
+ opacity: 0;
+ content: "";
+ transition: .2s
+ border: white solid 1px;
+ transition:0.3s;
+}
+.side .usertext-body .md h5+h4+ul li a:hover:after {
+ opacity: 1
+}
+
+.side .usertext-body .md h5+h4+ul li:nth-child(1) a {
+ background-position: 0 0;
+ opacity: 0.7;
+
+}
+.side .usertext-body .md h5+h4+ul li:nth-child(1) a:after {
+ background-position: 0 -135px;
+}
+
+.side .usertext-body .md h5+h4+ul li:nth-child(2) a {
+ background-position: -30px 0
+}
+.side .usertext-body .md h5+h4+ul li:nth-child(2) a:after {
+ background-position: -30px -135px
+}
+
+.side .usertext-body .md h5+h4+ul li:nth-child(3) a {
+ background-position: -60px 0
+}
+.side .usertext-body .md h5+h4+ul li:nth-child(3) a:after {
+ background-position: -60px -135px
+}
+
+.side .usertext-body .md h5+h4+ul li:nth-child(4) a {
+ background-position: -90px 0
+}
+.side .usertext-body .md h5+h4+ul li:nth-child(4) a:after {
+ background-position: -90px -135px
+}
+
+.side .usertext-body .md h5+h4+ul li:nth-child(5) a {
+ background-position: -120px 0
+}
+.side .usertext-body .md h5+h4+ul li:nth-child(5) a:after {
+ background-position: -120px -135px
+}
+
+.side .usertext-body .md h5+h4+ul li:nth-child(6) a {
+ background-position: -150px 0
+}
+.side .usertext-body .md h5+h4+ul li:nth-child(6) a:after {
+ background-position: -150px -135px
+}
+
+.side .usertext-body .md h5+h4+ul li:nth-child(7) a {
+ background-position: -180px 0
+}
+.side .usertext-body .md h5+h4+ul li:nth-child(7) a:after {
+ background-position: -180px -135px
+}
+
+.side .usertext-body .md h5+h4+ul li:nth-child(8) a {
+ background-position: -210px 0
+}
+.side .usertext-body .md h5+h4+ul li:nth-child(8) a:after {
+ background-position: -210px -135px
+}
+
+.side .usertext-body .md h5+h4+ul li:nth-child(9) a {
+ background-position: -240px 0
+}
+.side .usertext-body .md h5+h4+ul li:nth-child(9) a:after {
+ background-position: -240px -135px
+}
+
+.side .usertext-body .md h5+h4+ul li:nth-child(10) a {
+ background-position: -270px 0
+}
+.side .usertext-body .md h5+h4+ul li:nth-child(10) a:after {
+ background-position: -270px -135px
+}
+
+.side .usertext-body .md h5+h4+ul li:nth-child(11) a {
+ background-position: -300px 0
+}
+.side .usertext-body .md h5+h4+ul li:nth-child(11) a:after {
+ background-position: -300px -135px
+}
+
+.side .usertext-body .md h5+h4+ul li:nth-child(12) a {
+ background-position: -330px 0
+}
+.side .usertext-body .md h5+h4+ul li:nth-child(12) a:after {
+ background-position: -330px -135px
+}
+
+@media screen and (max-width: 949px) {
+ .side h6+h1{
+ display:none;
+ }
+}
+
+/* Tanking */
+.side h6+h3+table {
+ width: 100%;
+}
+
+.side h6+h3+table th {
+ background-color: #F5AF1B;
+ border-radius: 1px;
+ color: #000000;
+ font-size: 100%;
+ font-weight: 700;
+ text-align: center;
+ text-shadow: 0 0;
+}
+
+.titlebox form.toggle, .leavemoderator {
+ background: transparent !important;
+}
+
+@media screen and (max-width: 899px) {
+ .side .usertext-body .md h5+h2+ul li a{
+ display:none;
+ }
+ .side .usertext-body .md h5+h3+ul{
+ margin-left:0;
+ left:16px;
+ }
+ 
+ .pagename a{
+ left:58px;
+ }
+
+ .side a[href*="http://nm.reddit.com/r/lakers"]{
+ left:125px;
+ }
+
+ .side a[href*="www.reddit.com/r/lakers"]{
+ left:125px;
+ }
+} 
+
+@media screen and (max-width: 599px) {
+ body {
+ margin-top: 94px;
+ padding-top: 0;
+ }
+ .side {
+ width:0;
+ overflow:hidden;
+ }
+
+ .pagename a, .side .usertext-body .md h5+h3+ul, .side .usertext-body .md h5+h4+ul, .side h6+h2+ul{
+ display:none;
+ } 
+
+.side a[href*="http://nm.reddit.com/r/lakers"] {
+ left: auto;
+ top: 82px;
+ right: 5px;
+}
+
+.side a[href*="http://www.reddit.com/r/lakers"] {
+ left: auto;
+ top: 82px;
+ right: 5px;
+}
+
+ .content {
+ margin-top: 82px;
+ background-position: center;
+ padding-top: 1px;
+ padding-right: 0;
+ padding-bottom: 0;
+ }
+ 
+ #header-bottom-left{
+ height:51px;
+ }
+
+ #header-bottom-left .tabmenu{
+ left:0;
+ right:0;
+ top:0px;
+ padding-left:45px;
+ height: 52px;
+ }
+
+ #header-bottom-right, .res-nightmode #header-bottom-right, html:lang(nm) #header-bottom-right {
+ position: absolute;
+ right: 0px;
+ top: 40px !important;
+ background-color: transparent;
+ }
+
+ .sidebox.submit, .res-nightmode .sidebox.submit, html:lang(nm) .sidebox.submit{
+ top:43px;
+ }
+
+ #header-img{
+ left:1px!important;
+ right: auto!important;
+ top:0;
+ }
+}
