@@ -29,7 +29,7 @@ module.exports = function getGames() {
           var rowsOfInfo = $("tr")
             .filter(function(i, el) {
               return (
-                $(this).hasClass("Table2__tr Table2__tr--sm Table2__even")
+                $(this).hasClass("Table__TR Table__TR--sm Table__even")
               );
             })
 

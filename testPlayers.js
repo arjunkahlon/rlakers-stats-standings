@@ -1,3 +1,4 @@
 const getPlayerStats = require("./getPlayerStats");
+const getGames = require("./getGames");
 
-getPlayerStats().then(players => console.log(players))
+getGames().then(results => console.log(results))
