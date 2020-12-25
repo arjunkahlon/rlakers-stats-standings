@@ -4,7 +4,7 @@
   "description": "Scrape standings and stat",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:players": "node testPlayers.js"
   },
   "author": "",
   "license": "ISC",

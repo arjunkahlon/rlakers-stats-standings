@@ -113,7 +113,7 @@ getStandings()
     // Player | MPG | PPG | RPG | APG
     for (var key in stats){
       console.log(key)
-      statsString += `${key}|${stats[key].MPG}|${stats[key].PPG}|${stats[key].RPG}|${stats[key].APG}|\n`;
+      statsString += `${key}|${stats[key].MIN}|${stats[key].PTS}|${stats[key].REB}|${stats[key].AST}|\n`;
     }
 
     statsString += "\n";
