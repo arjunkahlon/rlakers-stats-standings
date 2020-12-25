@@ -1,7 +1,7 @@
 FROM node:14-alpine
 RUN mkdir /code
+COPY . /code/
 WORKDIR /code
-ADD . /code/
 ENV NODE_ENV=production
 RUN npm i
 RUN touch /var/log/cron.log
