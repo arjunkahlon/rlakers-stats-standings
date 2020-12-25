@@ -7,10 +7,6 @@ const moment = require("moment-timezone");
 
 require("dotenv").config();
 
-if (!process.env.SUBREDDIT) {
-  throw console.error(`'SUBREDDIT' environment value not found!`);
-}
-
 const r = new snoowrap({
   userAgent: "app",
   clientId: "GufnVQldw0V4pw",
@@ -271,8 +267,10 @@ getStandings()
       "#####[](/r)" +
       afterSplit;
 
+    const subreddit = process.env.NODE_ENV === 'production' ? 'lakers' : 'likwidtesting'  
     console.log(settings);
-    r.getSubreddit(process.env.SUBREDDIT).editSettings({
+    console.log("Node Environment:", process.env.NODE_ENV, " > ", `https://old.reddit.com/r/${subreddit}`)
+    r.getSubreddit(subreddit).editSettings({
       description: settings
     });
   });
