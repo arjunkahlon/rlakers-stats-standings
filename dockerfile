@@ -7,4 +7,4 @@ RUN npm i
 RUN touch /var/log/cron.log
 COPY config/crontab /etc/cron.d/rlakercron
 RUN chmod 0644 /etc/cron.d/rlakercron
-CMD cron -f
+CMD ["crond", "-f"]
