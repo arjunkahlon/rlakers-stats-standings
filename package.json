@@ -6,6 +6,7 @@
   "scripts": {
     "prod": "NODE_ENV=production node main.js",
     "start": "node main.js",
+    "prod": "NODE_ENV=production node main.js",
     "service": "node service.js"
   },
   "author": "",
