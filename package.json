@@ -4,6 +4,7 @@
   "description": "Scrape standings and stat",
   "main": "index.js",
   "scripts": {
+    "prod": "NODE_ENV=production node main.js",
     "start": "node main.js",
     "service": "node service.js"
   },

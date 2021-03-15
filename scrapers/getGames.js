@@ -90,7 +90,7 @@ module.exports = function getGames() {
               const time_result =
                 thirdCol.firstChild.firstChild.firstChild.data;
 
-              if (time_result !== "LIVE"){
+              if (!["LIVE", "TBD"].includes(time_result)){
                 gameHour = Number(time_result.split(":")[0]);
                 const ampm = time_result.split(" ")[1];
                 if (gameHour === 12) {
